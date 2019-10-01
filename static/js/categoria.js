@@ -1,0 +1,2 @@
+
+$("#tableCategoria").bootstrapTable();
