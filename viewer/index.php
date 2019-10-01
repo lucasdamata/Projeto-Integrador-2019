@@ -16,15 +16,15 @@
     <nav  role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="#">Portifólio</a></li>
+        <li><a id='index' href="index.php">Home</a></li>
+        <li><a id= 'portifolio' href="portifolio.php">Portifólio</a></li>
         <li><a href="#">Sobre-nós</a></li>
         <li><a href="#">Contato</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
           <li><a href="index.php">Home</a></li>
-          <li><a href="#">Portifólio</a></li>
+          <li><a href="portifolio.php">Portifólio</a></li>
           <li><a href="#">Sobre-nós</a></li>
           <li><a href="#">Contato</a></li>
       </ul>
@@ -33,8 +33,18 @@
   </nav>
  
     </div>
-  </div>   
-     
+  </div>  
+  <div class="center-align">
+            <div class="parallax"><img class="responsive-img" src="logo_v/0004.jpg"></div>
+            </div> 
+     <div>
+        <?php
+              require "home.php";
+              echo $conteudo;
+
+        ?>
+     </div>
+
 
       <footer class="page-footer">
         <div class="container">
