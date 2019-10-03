@@ -16,7 +16,7 @@
   <body>
     <div class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper purple lighten-4">
+        <div class="nav-wrapper purple lighten-5">
           <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="130" height="65"/></a>
           <ul id="navbar-items" class="left hide-on-med-and-down">
             <li><a id='index' href="index.php">Início</a></li>
@@ -25,7 +25,7 @@
                 Portifólio <i class="material-icons right">arrow_drop_down</i>
               </a>
             </li>
-            <li><a href="#">Sobre-nós</a></li>
+            <li><a href="#">Sobre</a></li>
             <li><a href="#">Contato</a></li>
           </ul>
 
@@ -43,8 +43,8 @@
         <!-- Menu Mobile -->
         <ul id="nav-mobile" class="sidenav">
               <li><a href="index.php">Início</a></li>
-              <li><a href="portifolio.php">Portifólio</a></li>
-              <li><a href="#">Sobre-nós</a></li>
+              <li><a href="portifolio.php">Projetos</a></li>
+              <li><a href="#">Sobre</a></li>
               <li><a href="#">Contato</a></li>
           </ul>
       </nav>
@@ -67,7 +67,7 @@
               <img src="images/woman.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
             </div>
             <div class="col s10">
-              <span class="black-text"><h4>Sobre nós</h4>
+              <span class="black-text"><h4>Sobre</h4>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione sed, nemo necessitatibus 
                 inventore sapiente doloribus atque molestiae quaerat numquam perspiciatis vero et veniam architecto 
                 porro at, molestias ad ipsam saepe.
@@ -82,9 +82,9 @@
 
         <div>
           <br>
-          <u>
-            <h2 style="text-align:center">Projetos Recentes</h2>
-          </u>
+          
+          <h2 style="text-align:center; font-family:courier">Projetos Recentes</h2>
+          
             <?php
                   require "home.php";
                   echo $conteudo;
