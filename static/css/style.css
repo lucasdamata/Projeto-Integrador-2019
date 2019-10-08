@@ -12,3 +12,21 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+#h2{
+  position: relative;
+  text-align:left; 
+  font-family: 'FreeMono', monospace;
+}
+
+#h2-destaques {
+  position: relative;
+  text-align:left; 
+  font-family: 'FreeMono', monospace;
+  left: 185px;
+}
+
+.body{
+  font-family: 'Georgia', serif;
+  font-size: medium;
+}

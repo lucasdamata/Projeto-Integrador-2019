@@ -13,11 +13,11 @@
     <link href="../static/css/bootstrap-table-materialize.min.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="body">
     <div class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper purple lighten-5">
-          <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="130" height="65"/></a>
+        <div class="nav-wrapper purple lighten-4">
+          <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="140" height="65"/></a>
           <ul id="navbar-items" class="left hide-on-med-and-down">
             <li><a id='index' href="index.php">Início</a></li>
             <li>
@@ -47,15 +47,19 @@
               <li><a href="#">Sobre</a></li>
               <li><a href="#">Contato</a></li>
           </ul>
+        </div>
       </nav>
+    </div>
     
+        <div class="carousel carousel-slider center">
+            <a class="carousel-item"><img src="images/Of01.jpg"></a>
+            <a class="carousel-item"><img src="images/Of 02.jpg"></a>
+            <a class="carousel-item"><img src="images/Of 03.jpg"></a>
+          <div class="carousel-fixed-item center">
+            <a class="btn waves-effect white grey-text darken-text-2 preview"><</a>
+            <a class="btn waves-effect white grey-text darken-text-2 next">></a>
+          </div>
         </div>
-      </div>  
-      <div class="center-align">
-        <div class="parallax">
-          <img class="capa responsive-img" src="logo_v/0004.jpg" width="750">
-        </div>
-      </div> 
 
       <br>
 
@@ -67,7 +71,7 @@
               <img src="images/woman.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
             </div>
             <div class="col s10">
-              <span class="black-text"><h4>Sobre</h4>
+              <span class="black-text"><h2 id="h2">Sobre</h2>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione sed, nemo necessitatibus 
                 inventore sapiente doloribus atque molestiae quaerat numquam perspiciatis vero et veniam architecto 
                 porro at, molestias ad ipsam saepe.
@@ -81,9 +85,9 @@
       <br>
 
         <div>
-          <br>
           
-          <h2 style="text-align:center; font-family:courier">Projetos Recentes</h2>
+          
+          
           
             <?php
                   require "home.php";
@@ -92,6 +96,11 @@
             ?>
         </div>
 
+      <br>
+      <div align="center">
+        <iframe id="mapa" src="https://www.google.com/maps/d/embed?mid=1mmqPri92zVaw2RtBTbayZBF-YrQ" width="640" height="480" align="middle"></iframe>
+      </div>
+      <br>
 
       <footer class="page-footer purple lighten-4">
         <div class="container">
@@ -119,6 +128,32 @@
 
       <!--jquery-->
       <script src="../static/js/jquery-3.4.1.min.js"></script>
+
+      <script>
+      $(document).ready(function(){
+        $(document).ready(function(){
+          $('.carousel').carousel({
+            dist: 0,
+            padding: 5,
+            indicators: true,
+            fullWidth: true
+          });
+        });
+
+
+        
+        $('.next').click(function(){
+          $('.carousel').carousel('next');
+        });
+
+        $('.preview').click(function(){
+          $('.carousel').carousel('prev');
+        });
+      });
+        
+
+      </script>
+
       <script src="../static/js/materialize.js"></script>
       <script src="../static/js/bootstrap-table.min.js"></script>
       <script src="../static/js/bootstrap-table-materialize.min.js"></script>
