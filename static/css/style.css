@@ -17,7 +17,8 @@
   position: relative;
   text-align:left; 
   font-family: 'FreeMono', monospace;
-}
+  font-weight: unset;
+  }
 
 #h2-destaques {
   position: relative;
@@ -30,3 +31,30 @@
   font-family: 'Georgia', serif;
   font-size: medium;
 }
+
+#subirTopo {
+  text-decoration: none;
+  margin: 30px;
+  display:block;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  border: 0;
+  font-family: sans-serif;
+  opacity: .8;
+  }
+  
+  #subirTopo:hover {
+  opacity:1;
+  }
+
+  section{
+    background: #f3e5f5;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }

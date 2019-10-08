@@ -11,6 +11,7 @@
     <link href="../static/css/style.css" rel="stylesheet">
     <link href="../static/css/bootstrap-table.min.css" rel="stylesheet">
     <link href="../static/css/bootstrap-table-materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body class="body">
@@ -22,7 +23,7 @@
             <li><a id='index' href="index.php">Início</a></li>
             <li>
               <a class="dropdown-trigger" data-target="dropdown-menu" id= 'portifolio' href="#">
-                Portifólio <i class="material-icons right">arrow_drop_down</i>
+                Projetos <i class="material-icons right">arrow_drop_down</i>
               </a>
             </li>
             <li><a href="#">Sobre</a></li>
@@ -64,6 +65,8 @@
       <br>
 
 <div class="container">
+    <hr>
+    <br>
       <div class="col s12 m8 offset-m2 l6 offset-l3">
         <div class="card-panel grey lighten-5 z-depth-1">
           <div class="row valign-wrapper">
@@ -82,8 +85,6 @@
       </div>
       </div>
 
-      <br>
-
         <div>
           
           
@@ -95,20 +96,100 @@
 
             ?>
         </div>
+      
+      <hr />
 
       <br>
-      <div align="center">
-        <iframe id="mapa" src="https://www.google.com/maps/d/embed?mid=1mmqPri92zVaw2RtBTbayZBF-YrQ" width="640" height="480" align="middle"></iframe>
-      </div>
+
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col s12">
+              <h2 id="h2">O que fazemos?</h2>
+            </div>
+            <div class="col s12 m4">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">Card Title</span>
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m4">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">Card Title</span>
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m4">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">Card Title</span>
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+              </div>
+              <br>
+            </div>
+            <br>
+            <div align="center">
+              <a class="waves-effect deep-purple lighten-3 btn" align="middle" href="#">Entrar em contato</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <br>
+      <hr />
+
+      <a id="subirTopo">
+        <i class="material-icons deep-purple lighten-3">keyboard_arrow_up</i>
+      </a>
 
       <footer class="page-footer purple lighten-4">
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
-              <h5 class="white-text">Rodapé</h5>
-              <p class="grey-text text-lighten-4">Colocar meios de contato e outras informações.</p>
-              </div>
+              <h5 class="white-text">Informações Adicionais</h5>
+              <ul>
+                <li>
+                  <div class="col l1">
+                    <i class="material-icons deep-purple lighten-3">local_phone</i>
+                  </div>
+                  <div class="col l6">
+                    <a class="grey-text text-lighten-3" href="#">(034) 90000-0000 / (034) 3888-8888</a>
+                  </div>
+                </li>
+              </ul>
+              <br>
+              <ul> 
+                <li>
+                  <div class="col l1">
+                    <i class="material-icons deep-purple lighten-3">location_on</i>
+                  </div>
+                  <div class="col l6">
+                    <a class="grey-text text-lighten-3" href="https://www.google.com/maps/dir/-18.5858232,-46.5066368/unipam+maps/@-18.5803057,-46.5151017,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94ae8b2b6cbccdd1:0x13323dbb548c2682!2m2!1d-46.5137325!2d-18.5746726" target="blank_">
+                    Endereço</a>
+                  </div>
+                </li>
+              </ul>
+              <br>
+              <ul> 
+                <li>
+                  <div class="col l1">
+                    <i class="material-icons deep-purple lighten-3">location_on</i>
+                  </div>
+                  <div class="col l6">
+                    <a class="grey-text text-lighten-3" href="https://www.google.com/maps/dir/-18.5858232,-46.5066368/unipam+maps/@-18.5803057,-46.5151017,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94ae8b2b6cbccdd1:0x13323dbb548c2682!2m2!1d-46.5137325!2d-18.5746726" target="blank_">
+                    Endereço</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
                 <div class="col l4 offset-l2 s12">
                   <h5 class="white-text">Mapa do site</h5>
                   <ul>
@@ -128,6 +209,28 @@
 
       <!--jquery-->
       <script src="../static/js/jquery-3.4.1.min.js"></script>
+
+      <script type="text/javascript">
+        jQuery(document).ready(function(){
+
+        jQuery("#subirTopo").hide();
+
+        jQuery('a#subirTopo').click(function () {
+                jQuery('body,html').animate({
+                  scrollTop: 0
+                }, 800);
+                return false;
+          });
+
+        jQuery(window).scroll(function () {
+                if (jQuery(this).scrollTop() > 1000) {
+                    jQuery('#subirTopo').fadeIn();
+                } else {
+                    jQuery('#subirTopo').fadeOut();
+                }
+            });
+        });
+      </script>
 
       <script>
       $(document).ready(function(){
