@@ -158,10 +158,10 @@
               <ul>
                 <li>
                   <div class="col l1">
-                    <i class="material-icons deep-purple lighten-3">local_phone</i>
+                  <img src="images/067-phone.png"/>
                   </div>
                   <div class="col l6">
-                    <a class="grey-text text-lighten-3" href="#">(034) 90000-0000 / (034) 3888-8888</a>
+                    <a class="grey-text text-lighten-3">(034) 90000-0000 / (034) 3888-8888</a>
                   </div>
                 </li>
               </ul>
@@ -169,11 +169,11 @@
               <ul> 
                 <li>
                   <div class="col l1">
-                    <i class="material-icons deep-purple lighten-3">location_on</i>
+                  <img src="images/073-location2.png"/>
                   </div>
                   <div class="col l6">
                     <a class="grey-text text-lighten-3" href="https://www.google.com/maps/dir/-18.5858232,-46.5066368/unipam+maps/@-18.5803057,-46.5151017,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94ae8b2b6cbccdd1:0x13323dbb548c2682!2m2!1d-46.5137325!2d-18.5746726" target="blank_">
-                    Endereço</a>
+                    Rua Major Gote</a>
                   </div>
                 </li>
               </ul>
@@ -181,11 +181,35 @@
               <ul> 
                 <li>
                   <div class="col l1">
-                    <i class="material-icons deep-purple lighten-3">location_on</i>
+                  <img src="images/402-facebook2.png"/>
                   </div>
                   <div class="col l6">
-                    <a class="grey-text text-lighten-3" href="https://www.google.com/maps/dir/-18.5858232,-46.5066368/unipam+maps/@-18.5803057,-46.5151017,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94ae8b2b6cbccdd1:0x13323dbb548c2682!2m2!1d-46.5137325!2d-18.5746726" target="blank_">
-                    Endereço</a>
+                    <a class="grey-text text-lighten-3" href="https://www.facebook.com/Renatavazarquiteta" target="blank_">
+                    /Renatavazarquiteta</a>
+                  </div>
+                </li>
+              </ul>
+              <br>
+              <ul> 
+                <li>
+                  <div class="col l1">
+                  <img src="images/403-instagram.png"/>
+                  </div>
+                  <div class="col l6">
+                    <a class="grey-text text-lighten-3" href="https://www.instagram.com/renata.arquiteta/" target="blank_">
+                    @renata.arquiteta/</a>
+                  </div>
+                </li>
+              </ul>
+              <br>
+              <ul> 
+                <li>
+                  <div class="col l1">
+                  <img src="images/389-mail2.png"/>
+                  </div>
+                  <div class="col l6">
+                    <a class="grey-text text-lighten-3">
+                    renata.arquiteta@live.com</a>
                   </div>
                 </li>
               </ul>
@@ -193,15 +217,21 @@
                 <div class="col l4 offset-l2 s12">
                   <h5 class="white-text">Mapa do site</h5>
                   <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Informação</a></li>
+                    <li style="list-style-type:circle; color: black;"><a class="grey-text text-lighten-3">Início</a></li>
+                    <li style="list-style-type:circle; color: black;"><a class="grey-text text-lighten-3">Projetos</a></li>
+                    <li style="list-style-type:circle; color: black;"><a class="grey-text text-lighten-3">Sobre</a></li>
+                    <li style="list-style-type:circle; color: black;"><a class="grey-text text-lighten-3">Contato</a></li>
                   </ul>
                 </div>
               </div>
             </div>
-          <div class="footer-copyright">
+        <div class="footer-copyright">
           <div class="container">
-            © 2019 Copyrights
-            <a class="grey-text text-lighten-4 right" href="#!">Renata Vaz</a>
+            <div class="row">
+              <div align="center" class="col s12">
+                <p align="middle">© 2019 Copyrights</p>
+              </div>
+            </div>     
           </div>
         </div>
       </footer>

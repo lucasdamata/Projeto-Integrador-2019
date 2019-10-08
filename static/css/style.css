@@ -32,6 +32,16 @@
   font-size: medium;
 }
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
 #subirTopo {
   text-decoration: none;
   margin: 30px;
