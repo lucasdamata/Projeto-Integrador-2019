@@ -53,9 +53,9 @@
     </div>
     
         <div class="carousel carousel-slider center">
-            <a class="carousel-item"><img src="images/Of01.jpg"></a>
-            <a class="carousel-item"><img src="images/Of 02.jpg"></a>
-            <a class="carousel-item"><img src="images/Of 03.jpg"></a>
+            <a class="carousel-item"><img class="responsive-img" src="images/19.png"></a>
+            <a class="carousel-item"><img class="responsive-img" src="images/Of 02.jpg"></a>
+            <a class="carousel-item"><img class="responsive-img" src="images/16.png"></a>
           <div class="carousel-fixed-item center">
             <a class="btn waves-effect white grey-text darken-text-2 preview"><</a>
             <a class="btn waves-effect white grey-text darken-text-2 next">></a>
@@ -65,7 +65,7 @@
       <br>
 
 <div class="container">
-    <hr>
+    
     <br>
       <div class="col s12 m8 offset-m2 l6 offset-l3">
         <div class="card-panel grey lighten-5 z-depth-1">
@@ -87,8 +87,7 @@
 
         <div>
           
-          
-          
+        
           
             <?php
                   require "home.php";
@@ -96,11 +95,10 @@
 
             ?>
         </div>
-      
-      <hr />
-
-      <br>
-
+      <div>
+        <hr>
+        <br>
+      </div>
       <section>
         <div class="container">
           <div class="row">
@@ -142,13 +140,19 @@
           </div>
         </div>
       </section>
-
       <br>
-      <hr />
+      <div>
+        <hr>
+      </div>
 
       <a id="subirTopo">
         <i class="material-icons deep-purple lighten-3">keyboard_arrow_up</i>
       </a>
+
+      <div>
+        <hr>
+        <br>
+      </div>
 
       <footer class="page-footer purple lighten-4">
         <div class="container">
@@ -228,7 +232,7 @@
         <div class="footer-copyright">
           <div class="container">
             <div class="row">
-              <div align="center" class="col s12">
+              <div align="center">
                 <p align="middle">© 2019 Copyrights</p>
               </div>
             </div>     

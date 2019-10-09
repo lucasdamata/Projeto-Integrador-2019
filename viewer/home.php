@@ -5,8 +5,8 @@
 
       <div class="container">
         <div class="row">
-          <br>
-          <hr />
+          <br>  
+          <hr>
           <h2 id="h2-destaques">Destaques</h2>
           <div class="col s23"> <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
