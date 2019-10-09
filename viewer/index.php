@@ -46,7 +46,7 @@
               <li><a href="index.php">Início</a></li>
               <li><a href="portifolio.php">Projetos</a></li>
               <li><a href="#">Sobre</a></li>
-              <li><a href="#">Contato</a></li>
+              <li><a href="ccontato.php">Contato</a></li>
           </ul>
         </div>
       </nav>
@@ -65,7 +65,6 @@
       <br>
 
 <div class="container">
-    
     <br>
       <div class="col s12 m8 offset-m2 l6 offset-l3">
         <div class="card-panel grey lighten-5 z-depth-1">
@@ -135,7 +134,7 @@
             </div>
             <br>
             <div align="center">
-              <a class="waves-effect deep-purple lighten-3 btn" align="middle" href="#">Entrar em contato</a>
+              <a class="waves-effect deep-purple lighten-3 btn" align="middle" href="contato.php">Entrar em contato</a>
             </div>
           </div>
         </div>
@@ -221,10 +220,10 @@
                 <div class="col l4 offset-l2 s12">
                   <h5 class="white-text">Mapa do site</h5>
                   <ul>
-                    <li style="list-style-type:circle; color: black;"><a class="grey-text text-lighten-3">Início</a></li>
-                    <li style="list-style-type:circle; color: black;"><a class="grey-text text-lighten-3">Projetos</a></li>
-                    <li style="list-style-type:circle; color: black;"><a class="grey-text text-lighten-3">Sobre</a></li>
-                    <li style="list-style-type:circle; color: black;"><a class="grey-text text-lighten-3">Contato</a></li>
+                    <li style="list-style-type:circle; color: black;"><a href="index.php" class="grey-text text-lighten-3">Início</a></li>
+                    <li style="list-style-type:circle; color: black;"><a href="portifolio.php" class="grey-text text-lighten-3">Projetos</a></li>
+                    <li style="list-style-type:circle; color: black;"><a href="#" class="grey-text text-lighten-3">Sobre</a></li>
+                    <li style="list-style-type:circle; color: black;"><a href="contato.php" class="grey-text text-lighten-3">Contato</a></li>
                   </ul>
                 </div>
               </div>
