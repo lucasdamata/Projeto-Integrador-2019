@@ -9,7 +9,6 @@
     <link href="../static/css/fonts.css" rel="stylesheet">
     <link href="../static/css/materialize.css" type="text/css" rel="stylesheet"/>
     <link href="../static/css/style.css" rel="stylesheet">
-    <link href="../static/css/style1.css" rel="stylesheet">
     <link href="../static/css/bootstrap-table.min.css" rel="stylesheet">
     <link href="../static/css/bootstrap-table-materialize.min.css" rel="stylesheet">
   </head>
@@ -56,32 +55,48 @@
         <div class = "col-8">
       <h1>Insira seu Projeto</h1>
 
-        
+      
         <p class="nome">
-            <input type="text" id="nomeid" placeholder="NOMEPROJETO" required="required" name="nome" />
-            <label for="nome">Título</label>
+            <input type="text" id="nomeid" placeholder="Nomeprojeto" required="required" name="nome" />
+            
         </p>
         </div>
         <br> <br>
-        <div class = "col-8">
-        <p class="fone">
-            <input type="text" id="foneid" placeholder="(xx)xx-xx-xx-xx" name="fone" />
-            <label for="fone">Fone</label>
-            </div>
-        </p>
-
         <br> <br>
-        <div class = "col-8">
+        <form action="#">
         <p>
-            <input type="email" id="emailid" placeholder="Joao@gmail.com" name="email" />
-            <label for="email">Email</label>
+          <label>
+             <input class="with-gap" name="group1" type="radio" checked />
+              <span>Empresarial</span>
+          </label>
         </p>
-        </div>
+        <p>
+          <label>
+             <input class="with-gap" name="group1" type="radio" checked />
+              <span>Residencial</span>
+          </label>
+        </p>
+        </form>
         <br> <br>
+       
+
         <div class = "col-8">
         <p>
             <textarea placeholder="DESCRIÇÃO"></textarea>
         </p>
+        <br> <br>
+
+      <p style="font-size:20px">Faça upload da sua imagem aqui</p>
+      <?php
+      require "upload.php";
+      if(isset($msg) && $msg != false) echo "<p> $msg </p>"; ?>
+      <form action="upload.php" method="POST" enctype="multipart/form-data">
+        Arquivo: <input type="file" required name="arquivo">
+        <input type="submit" value="Salvar">
+      </form>
+      
+      <br>
+        
         <br> <br>
         <p class="submit">
             <input type="submit" onclick="Enviar();" value="Enviar" />
@@ -90,10 +105,14 @@
         </div>
         </div>
 
+
+
  
     </form>
+    <br> <br>
+    <br> <br>
+    <br> 
     
-   
 
 </div>
 <footer class="page-footer purple lighten-4">
@@ -119,6 +138,14 @@
         </div>
       </footer>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.dropdown-trigger');
+          var instances = M.Dropdown.init(elems, options);
+        });
+
+    </script>
 
 </body>
 </html>
