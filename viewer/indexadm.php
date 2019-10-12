@@ -11,6 +11,23 @@
     <link href="../static/css/style.css" rel="stylesheet">
     <link href="../static/css/bootstrap-table.min.css" rel="stylesheet">
     <link href="../static/css/bootstrap-table-materialize.min.css" rel="stylesheet">
+    <style>
+        .button{
+          float:  right;
+          border: 0;
+          background: #e1bee7;
+          color: white;
+          padding: 12px 50px;
+          border-radius: 25px;
+          cursor: pointer;
+          transition: 0,5s;
+
+        }
+        .button:hover{
+          background: #5e345c;
+        }
+    
+    </style>
   </head>
 
   <body class="body">
@@ -53,7 +70,7 @@
             <div class ="container">
           <div class = "row">
         <div class = "col-8">
-      <h1>Insira seu Projeto</h1>
+      <h3>Insira seu Projeto</h1>
 
       
         <p class="nome">
@@ -62,7 +79,7 @@
         </p>
         </div>
         <br> <br>
-        <br> <br>
+        
         <form action="#">
         <p>
           <label>
@@ -99,7 +116,7 @@
         
         <br> <br>
         <p class="submit">
-            <input type="submit" onclick="Enviar();" value="Enviar" />
+            <input class="button" type="submit" onclick="Enviar();" value="Enviar" />
         </p>
         </div>
         </div>
@@ -115,29 +132,7 @@
     
 
 </div>
-<footer class="page-footer purple lighten-4">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Rodapé</h5>
-              <p class="grey-text text-lighten-4">Colocar meios de contato e outras informações.</p>
-              </div>
-                <div class="col l4 offset-l2 s12">
-                  <h5 class="white-text">Mapa do site</h5>
-                  <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Informação</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          <div class="footer-copyright">
-          <div class="container">
-            © 2019 Copyrights
-            <a class="grey-text text-lighten-4 right" href="#!">Renata Vaz</a>
-          </div>
-        </div>
-      </footer>
-    </div>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
