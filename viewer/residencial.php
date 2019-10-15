@@ -78,8 +78,8 @@
                   <p>Here is some more information about this product that is only revealed once clicked on.</p>
                 </div>
               </div> </div>
-            <div class="col s12"> <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
+            <div class="col s6"> <div class="card">
+                <div class="card-image materialboxed waves-effect waves-block waves-light">
                   <img class="activator" src="projetos/varandagourmet/Of 01.jpg">
                 </div>
                 <div class="card-content">
@@ -91,7 +91,7 @@
                   <p>Here is some more information about this product that is only revealed once clicked on.</p>
                 </div>
               </div> </div>
-            <div class="col s12">
+            <div class="col s6">
                     <div class="card">
                             <div class="card-image waves-effect waves-block waves-light">
                               <img class="activator" src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg">
@@ -122,7 +122,7 @@
                       <p>Here is some more information about this product that is only revealed once clicked on.</p>
                     </div>
                   </div> </div>
-                <div class="col s12"> <div class="card">
+                <div class="col s6"> <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                       <img class="activator" src="projetos/varandagourmet/Of 01.jpg">
                     </div>
@@ -135,7 +135,7 @@
                       <p>Here is some more information about this product that is only revealed once clicked on.</p>
                     </div>
                   </div> </div>
-                <div class="col s12">
+                <div class="col s6">
                         <div class="card">
                                 <div class="card-image waves-effect waves-block waves-light">
                                   <img class="activator" src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg">
@@ -151,7 +151,7 @@
                          </div>
               
                         </div>
-                        <div class="col s12"> <div class="card">
+                        <div class="col s6"> <div class="card">
                                 <div class="card-image waves-effect waves-block waves-light">
                                   <img class="activator" src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg">
                                 </div>
@@ -164,7 +164,7 @@
                                   <p>Here is some more information about this product that is only revealed once clicked on.</p>
                                 </div>
                               </div> </div>
-                            <div class="col s12"> <div class="card">
+                            <div class="col s6"> <div class="card">
                                 <div class="card-image waves-effect waves-block waves-light">
                                   <img class="activator" src="projetos/varandagourmet/Of 01.jpg">
                                 </div>
