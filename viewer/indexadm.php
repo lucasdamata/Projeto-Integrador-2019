@@ -48,8 +48,8 @@
 
           <ul id="dropdown-menu" class="dropdown-content">
             <li><a href="portifolio.php">Todos</a></li>
-            <li><a href="#">Residencial</a></li>
-            <li><a href="#">Corporativo</a></li>
+            <li><a href="residencial.php">Residencial</a></li>
+            <li><a href="comercial.php">Corporativo</a></li>
           </ul>
 
           <a href="#" data-target="nav-mobile" class="sidenav-trigger">
