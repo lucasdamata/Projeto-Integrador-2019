@@ -3,7 +3,7 @@ class DataBase{
     private $conexao;
 	 
 	public function getConexao(){
-	    $this->conexao =  new PDO('mysql:host=dbrvarquitetura.cjhghckflzqf.us-west-1.rds.amazonaws.com;port:3306;dbname=dbrvarquitetura','root','projeto2019');
+	    $this->conexao =  new PDO("mysql:dbname=rvarquitetura; host=localhost", "root", "");
         $this->conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$this->conexao->setAttribute(PDO::ATTR_CASE, PDO::CASE_LOWER);
 		$this->conexao->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
