@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,25 +74,47 @@
           <div class = "row">
         <div class = "col-8">
       <h3>Insira seu Projeto</h1>
+      <?php
 
-      
+        if(isset($_SESSION['msg'])){
+          echo $_SESSION['msg'];
+          unset($_SESSION['msg']);
+        }
+
+      ?>
+
+        <form method="POST" action="processa.php">
         <p class="nome">
             <input type="text" id="nomeid" placeholder="Nomeprojeto" required="required" name="nome" />
             
         </p>
         </div>
+
         <br> <br>
+
+        <div class = "col-8">
+        <p>
+            <input type="text" name="descricao" placeholder="Descreva seu projeto">
+        </p>
+        <br> <br>
+
+        <br> <br>
+        <p class="submit">
+            <input class="button" type="submit" value="Cadastrar">
+        </p>
+        <br><br><br>
+        </form>
         
         <form action="#">
         <p>
           <label>
-             <input class="with-gap" name="group1" type="radio" checked />
+             <input class="with-gap" name="group1" type="checkbox" checked />
               <span>Empresarial</span>
           </label>
         </p>
         <p>
           <label>
-             <input class="with-gap" name="group1" type="radio" checked />
+             <input class="with-gap" name="group1" type="checkbox" checked />
               <span>Residencial</span>
           </label>
         </p>
@@ -97,11 +122,7 @@
         <br> <br>
        
 
-        <div class = "col-8">
-        <p>
-            <textarea placeholder="DESCRIÇÃO"></textarea>
-        </p>
-        <br> <br>
+     
 
       <p style="font-size:20px">Faça upload da sua imagem aqui</p>
       <?php
@@ -114,10 +135,7 @@
       
       <br>
         
-        <br> <br>
-        <p class="submit">
-            <input class="button" type="submit" onclick="Enviar();" value="Enviar" />
-        </p>
+        
         </div>
         </div>
         </div>
