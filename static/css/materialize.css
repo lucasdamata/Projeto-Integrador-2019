@@ -4527,7 +4527,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3.56rem;
+  /*font-size: 3.56rem;*/
   line-height: 110%;
   margin: 2.3733333333rem 0 1.424rem 0;
 }
@@ -4882,7 +4882,7 @@ small {
 }
 
 .card .card-content {
-  padding: 24px;
+  padding: 5px;
   border-radius: 0 0 2px 2px;
 }
 

@@ -2,13 +2,13 @@
 session_start();
 include_once("conexao1.php");
 
-$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+$titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_STRING);
 $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_STRING);
 
-//echo "Nome: $nome <br>";
+//echo "Título: $titulo <br>";
 //echo "Descrição: $descricao <br>";
 
-$result_usuario = "INSERT INTO usuarios (nome, descricao, created) VALUES ('$nome', '$descricao', NOW())";
+$result_usuario = "INSERT INTO projetos (titulo, descricao, created) VALUES ('$titulo', '$descricao', NOW())";
 $resultado_usuario = mysqli_query($conn, $result_usuario);
 
 if(mysqli_insert_id($conn)){

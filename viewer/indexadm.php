@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,7 +74,8 @@ session_start();
             <div class ="container">
           <div class = "row">
         <div class = "col-8">
-      <h3>Insira seu Projeto</h1>
+      <h3>Inserir novo projeto</h3>
+      <br>
       <?php
 
         if(isset($_SESSION['msg'])){
@@ -85,7 +87,7 @@ session_start();
 
         <form method="POST" action="processa.php">
         <p class="nome">
-            <input type="text" id="nomeid" placeholder="Nomeprojeto" required="required" name="nome" />
+            <input type="text" id="nomeid" placeholder="Título do projeto" required="required" name="titulo" />
             
         </p>
         </div>
@@ -96,30 +98,36 @@ session_start();
         <p>
             <input type="text" name="descricao" placeholder="Descreva seu projeto">
         </p>
-        <br> <br>
+        <br>
 
-        <br> <br>
         <p class="submit">
             <input class="button" type="submit" value="Cadastrar">
         </p>
         <br><br><br>
+
         </form>
         
         <form action="#">
+        <p style="font-size:20px">Selecione as áreas na qual deseja inserir o projeto: <br> <br>
+          <label>
+             <input class="with-gap" name="group1" type="checkbox"  />
+              <span>Destaques</span>
+          </label>
+        </p>
         <p>
           <label>
-             <input class="with-gap" name="group1" type="checkbox" checked />
+             <input class="with-gap" name="group1" type="checkbox"  />
               <span>Empresarial</span>
           </label>
         </p>
         <p>
           <label>
-             <input class="with-gap" name="group1" type="checkbox" checked />
+             <input class="with-gap" name="group1" type="checkbox" />
               <span>Residencial</span>
           </label>
         </p>
         </form>
-        <br> <br>
+        <br>
        
 
      
@@ -127,13 +135,18 @@ session_start();
       <p style="font-size:20px">Faça upload da sua imagem aqui</p>
       <?php
       require "upload.php";
-      if(isset($msg) && $msg != false) echo "<p> $msg </p>"; ?>
-      <form action="upload.php" method="POST" enctype="multipart/form-data">
+      if(isset($msg) && $msg != false) echo "<p> $msg </p>"; 
+      ?>
+      <form method="POST" enctype="multipart/form-data">
         Arquivo: <input type="file" required name="arquivo">
         <input type="submit" value="Salvar">
       </form>
+
+      <!-- action="upload.php" -->
       
       <br>
+        
+        
         
         
         </div>

@@ -17,13 +17,23 @@
   position: relative;
   text-align:left; 
   font-family: 'FreeMono', monospace;
-  font-weight: unset;
+  font-weight: normal;
+  font-size: 3.56rem;
   }
+
+#h2card {
+  position: relative;
+  text-align: left; 
+  font-family: 'Courier', monospace;
+  font-size: 2.0rem;
+  padding-left: 40px;
+}
 
 #h2-destaques {
   position: relative;
   text-align: center; 
   font-family: 'FreeMono', monospace;
+  font-size: 3.56rem;
 }
 
 .body{

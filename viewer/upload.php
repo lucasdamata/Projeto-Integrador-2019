@@ -1,5 +1,5 @@
 <?php
-  include("conexao.php");
+  include("conexao1.php");
   $msg = false;
   if(isset($_FILES['arquivo'])){
     $extensao = strtolower(substr($_FILES['arquivo']['name'], -4)); //pega a extensao do arquivo
