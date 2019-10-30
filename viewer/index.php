@@ -28,7 +28,8 @@
               </a>
             </li>
             <li><a href="#">Sobre</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="contato.php">Contato</a></li>
+            <li><a href="curso.php">Curso</a></li>
           </ul>
 
           <ul id="dropdown-menu" class="dropdown-content">
@@ -47,7 +48,7 @@
               <li><a href="index.php">Início</a></li>
               <li><a href="portifolio.php">Projetos</a></li>
               <li><a href="#">Sobre</a></li>
-              <li><a href="ccontato.php">Contato</a></li>
+              <li><a href="contato.php">Contato</a></li>
           </ul>
         </div>
       </nav>

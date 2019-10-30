@@ -1,0 +1,76 @@
+ .body{
+  font-family: 'Georgia', serif;
+ }
+
+    .contact-section{
+    background-color: white;
+    padding: 5px 50px;
+    
+    }
+    .contact-section h2{  
+      text-align: center;
+      color: #5e345c;
+      font-style: oblique;
+    }
+    .border{
+        width: 100px;
+        background: #5e345c;
+        margin: 40px , auto;
+    }
+    .contact-form{
+      max-width: 600px;
+      margin: auto;
+      padding: 0 0px;
+      overflow: hidden;
+      text-emphasis-color: black;
+      
+    }
+    .contact-form-text{
+     display: block;
+     width: 100%;
+     box-sizing: border-box;
+     margin: 20px 0;
+     border: 5px;
+     border-radius: 10px;
+     background:#f7e6ff;
+     padding: 10px 20px;
+     outline: none;
+     color: black;
+     transition: 0,5s;
+    }
+    
+    #contact-form-text{
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 20px 0;
+      border: 5px;
+      border-radius: 10px;
+      background:black;
+      padding: 10px 20px;
+      outline: none;
+      color: black;
+      transition: 0,5s;
+     }
+
+    .contact-form-text:focus{
+      box-shadow: 0 0 10 4px #5e345c;
+    }
+    textarea.contact-form-text{
+        resize: none;
+        height: 100px;
+    }
+    
+    .contact-form-btn{
+     float: right;
+     border: 0;
+     background: #e1bee7;
+     color: #fff;
+     padding: 12px 50px;
+     border-radius: 20px;
+     cursor: pointer;
+     transition: 0,5s;
+    }
+    .contact-form-btn:hover{
+        background:  #5e345c;
+    }

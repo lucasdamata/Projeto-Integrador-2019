@@ -5877,6 +5877,7 @@ body.keyboard-focused .dropdown-content li:focus {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 2rem;
+  background-color: white;
 }
 
 .sidenav .collapsible,
@@ -5913,7 +5914,7 @@ body.keyboard-focused .dropdown-content li:focus {
 .sidenav .collapsible-body,
 .sidenav.fixed .collapsible-body {
   border: 0;
-  background-color: #fff;
+  background-color: white;
 }
 
 .sidenav .collapsible-body li a,
@@ -7719,12 +7720,12 @@ input[type=range]::-ms-thumb {
 
 .sidenav .collapsible-body > ul:not(.collapsible) > li.active,
 .sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active {
-  background-color: #ee6e73;
+  background-color: white;
 }
 
 .sidenav .collapsible-body > ul:not(.collapsible) > li.active a,
 .sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active a {
-  color: #fff;
+  color:white;
 }
 
 .sidenav .collapsible-body {
