@@ -25,8 +25,7 @@
   position: relative;
   text-align: left; 
   font-family: 'Courier', monospace;
-  font-size: 2.0rem;
-  padding-left: 40px;
+  font-size: 1.5rem;
 }
 
 #h2-destaques {
@@ -37,6 +36,7 @@
 }
 
 .body{
+  overflow-x: hidden;
   font-family: 'Georgia', serif;
   font-size: medium;
 }
@@ -73,9 +73,10 @@ main {
   }
 
   section{
-    background: #f3e5f5;
     padding-top: 20px;
     padding-bottom: 30px;
+    background: #f4e8ff;
+    background: linear-gradient(to right, #BFAFBA  ,#A684A5)
   }
 
   hr {
@@ -83,6 +84,16 @@ main {
     box-sizing:border-box;
     width:100%; 
   }
+
+  div  .nav-wrapper{
+    background: linear-gradient(to right, #847095 ,#A684A5 , #BFAFBA); 
+  }
+
+  img .img-carrossel{
+    max-width: 100%;
+}
+
+
 
   
 

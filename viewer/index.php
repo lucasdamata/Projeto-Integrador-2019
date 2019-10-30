@@ -12,13 +12,14 @@
     <link href="../static/css/bootstrap-table.min.css" rel="stylesheet">
     <link href="../static/css/bootstrap-table-materialize.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   </head>
 
   <body class="body">
     <div class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper purple lighten-4">
-          <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="140" height="65"/></a>
+        <div class="nav-wrapper">
+          <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="140" height="60"/></a>
           <ul id="navbar-items" class="left hide-on-med-and-down">
             <li><a id='index' href="index.php">Início</a></li>
             <li>
@@ -51,11 +52,11 @@
         </div>
       </nav>
     </div>
-    
-        <div class="carousel carousel-slider center">
-            <a class="carousel-item"><img class="responsive-img" src="images/19.png"></a>
-            <a class="carousel-item"><img class="responsive-img" src="images/Of 02.jpg"></a>
-            <a class="carousel-item"><img class="responsive-img" src="images/16.png"></a>
+         
+        <div class="carousel carousel-slider">
+            <a class="carousel-item"><img id="img-carrossel" class="img-responsive" src="images/19.png"></a>
+            <a class="carousel-item"><img id="img-carrossel" class="img-responsive" src="images/Of 02.jpg"></a>
+            <a class="carousel-item"><img id="img-carrossel" class="img-responsive" src="images/16.png"></a>
           <div class="carousel-fixed-item center">
             <a class="btn waves-effect white grey-text darken-text-2 preview"><</a>
             <a class="btn waves-effect white grey-text darken-text-2 next">></a>
@@ -93,7 +94,7 @@
             ?>
         </div>
       <div>
-        <hr>
+        
         <br>
       </div>
       <section>
@@ -103,8 +104,8 @@
               <h2 id="h2">O que fazemos?</h2>
             </div>
             <div class="col s12 m4">
-              <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
+              <div class="card white-1">
+                <div class="card-content black-text">
                   <span class="card-title">Card Title</span>
                   <p>I am a very simple card. I am good at containing small bits of information.
                   I am convenient because I require little markup to use effectively.</p>
@@ -112,8 +113,8 @@
               </div>
             </div>
             <div class="col s12 m4">
-              <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
+              <div class="card white-1">
+                <div class="card-content black-text">
                   <span class="card-title">Card Title</span>
                   <p>I am a very simple card. I am good at containing small bits of information.
                   I am convenient because I require little markup to use effectively.</p>
@@ -121,8 +122,8 @@
               </div>
             </div>
             <div class="col s12 m4">
-              <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
+              <div class="card white-1">
+                <div class="card-content black-text">
                   <span class="card-title">Card Title</span>
                   <p>I am a very simple card. I am good at containing small bits of information.
                   I am convenient because I require little markup to use effectively.</p>
@@ -132,7 +133,8 @@
             </div>
             <br>
             <div align="center">
-              <a class="waves-effect deep-purple lighten-3 btn" align="middle" href="contato.php">Entrar em contato</a>
+              <a class="waves-effect btn" align="middle" href="contato.php">Entrar em contato</a>
+              <style>.waves-effect { background: #A684A5 }</style>
             </div>
           </div>
         </div>
@@ -143,7 +145,7 @@
       </div>
 
       <a id="subirTopo">
-        <i class="material-icons deep-purple lighten-3">keyboard_arrow_up</i>
+        <i class="material-icons topo">keyboard_arrow_up</i>
       </a>
 
       <div>
@@ -151,81 +153,33 @@
         <br>
       </div>
 
-      <footer class="page-footer purple lighten-4">
+      <footer class="page-footer"> <style>.page-footer { background: linear-gradient(to right, #847095 ,#A684A5 , #BFAFBA)  }</style>
         <div class="container">
           <div class="row">
-            <div class="col l6 s12">
+            <div class="col s12 m8 l8">
               <h5 class="white-text">Informações Adicionais</h5>
               <ul>
-                <li>
-                  <div class="col l1">
-                  <img src="images/067-phone.png"/>
-                  </div>
-                  <div class="col l6">
-                    <a class="grey-text text-lighten-3">(034) 90000-0000 / (034) 3888-8888</a>
-                  </div>
-                </li>
-              </ul>
-              <br>
-              <ul> 
-                <li>
-                  <div class="col l1">
-                  <img src="images/073-location2.png"/>
-                  </div>
-                  <div class="col l6">
-                    <a class="grey-text text-lighten-3" href="https://www.google.com/maps/dir/-18.5858232,-46.5066368/unipam+maps/@-18.5803057,-46.5151017,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94ae8b2b6cbccdd1:0x13323dbb548c2682!2m2!1d-46.5137325!2d-18.5746726" target="blank_">
-                    Rua Major Gote</a>
-                  </div>
-                </li>
-              </ul>
-              <br>
-              <ul> 
-                <li>
-                  <div class="col l1">
-                  <img src="images/402-facebook2.png"/>
-                  </div>
-                  <div class="col l6">
-                    <a class="grey-text text-lighten-3" href="https://www.facebook.com/Renatavazarquiteta" target="blank_">
-                    /Renatavazarquiteta</a>
-                  </div>
-                </li>
-              </ul>
-              <br>
-              <ul> 
-                <li>
-                  <div class="col l1">
-                  <img src="images/403-instagram.png"/>
-                  </div>
-                  <div class="col l6">
-                    <a class="grey-text text-lighten-3" href="https://www.instagram.com/renata.arquiteta/" target="blank_">
-                    @renata.arquiteta/</a>
-                  </div>
-                </li>
-              </ul>
-              <br>
-              <ul> 
-                <li>
-                  <div class="col l1">
-                  <img src="images/389-mail2.png"/>
-                  </div>
-                  <div class="col l6">
-                    <a class="grey-text text-lighten-3">
-                    renata.arquiteta@live.com</a>
-                  </div>
-                </li>
+                    <li> <img src="images/067-phone.png"/> <a class="grey-text text-lighten-3">(034) 98410-6642</a> </li>
+                    <li> <img src="images/073-location2.png"/> <a class="grey-text text-lighten-3" href="https://www.google.com/maps/dir/R.+Ver.+Chico+Filgueira,+21+-+Cai%C3%A7aras,+Patos+de+Minas+-+MG,+38702-178//@-18.5741074,-46.5164245,17z/data=!4m8!4m7!1m5!1m1!1s0x94ae8b2c8e6bed7f:0xb4d59166dfd9b808!2m2!1d-46.5141185!2d-18.5730251!1m0" target="blank_">
+                    R. Ver. Chico Filgueira, 21 - Caiçaras, Patos de Minas - MG<br></a></li>
+                    <li> <img src="images/403-instagram.png"/> <a class="grey-text text-lighten-3" href="https://www.instagram.com/renata.arquiteta/" target="blank_">
+                    @renata.arquiteta/</a> </li>
+                    <li> <img src="images/389-mail2.png"/> <a class="grey-text text-lighten-3">
+                    atendimento@renatavaz.com</a> </li>
               </ul>
             </div>
-                <div class="col l4 offset-l2 s12">
-                  <h5 class="white-text">Mapa do site</h5>
+            <div class="col s12 m4 l4">
+              <h5 class="white-text">Mapa do site</h5>
                   <ul>
                     <li style="list-style-type:circle; color: black;"><a href="index.php" class="grey-text text-lighten-3">Início</a></li>
                     <li style="list-style-type:circle; color: black;"><a href="portifolio.php" class="grey-text text-lighten-3">Projetos</a></li>
                     <li style="list-style-type:circle; color: black;"><a href="#" class="grey-text text-lighten-3">Sobre</a></li>
                     <li style="list-style-type:circle; color: black;"><a href="contato.php" class="grey-text text-lighten-3">Contato</a></li>
-                  </ul>
-                </div>
-              </div>
+                  </ul>  
             </div>
+          </div>
+        </div>
+                  
         <div class="footer-copyright">
           <div class="container">
             <div class="row">
@@ -236,7 +190,7 @@
           </div>
         </div>
       </footer>
-    </div>
+
 
       <!--jquery-->
       <script src="../static/js/jquery-3.4.1.min.js"></script>
@@ -267,14 +221,16 @@
       $(document).ready(function(){
         $(document).ready(function(){
           $('.carousel').carousel({
-            dist: 0,
             padding: 5,
             indicators: true,
             fullWidth: true
           });
+          autoplay();
+          function autoplay(){
+            $('.carousel').carousel('next');
+            setTimeout(autoplay, 5000);
+          }
         });
-
-
         
         $('.next').click(function(){
           $('.carousel').carousel('next');
@@ -291,6 +247,7 @@
       <script src="../static/js/materialize.js"></script>
       <script src="../static/js/bootstrap-table.min.js"></script>
       <script src="../static/js/bootstrap-table-materialize.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       
       <script src="../static/js/bootstrap-table-pt-BR.min.js"></script>
       <script src="../static/js/init.js"></script>

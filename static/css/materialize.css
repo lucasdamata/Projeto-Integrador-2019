@@ -8352,8 +8352,6 @@ input[type=range]::-ms-thumb {
 .carousel {
   overflow: hidden;
   position: relative;
-  width: 100%;
-  height: 650px !important;
   -webkit-perspective: 500px;
           perspective: 500px;
   -webkit-transform-style: preserve-3d;
@@ -8365,7 +8363,8 @@ input[type=range]::-ms-thumb {
 .carousel.carousel-slider {
     top: 0;
     left: 0;
-    height: 670px !important;
+    height: 600px;
+    width: 100%;
 }
 
 .carousel.carousel-slider .carousel-fixed-item {
@@ -8410,7 +8409,8 @@ input[type=range]::-ms-thumb {
 
 .carousel .carousel-item > img {
   width: 100%;
-  height: 100%;
+  height: 65vh !important;
+
 }
 
 .carousel .indicators {
