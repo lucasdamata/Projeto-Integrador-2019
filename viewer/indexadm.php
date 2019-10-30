@@ -85,7 +85,7 @@ session_start();
 
       ?>
 
-        <form method="POST" action="processa.php">
+        <form method="POST" action="insereProjeto.php">
         <p class="nome">
             <input type="text" id="nomeid" placeholder="Título do projeto" required="required" name="titulo" />
             

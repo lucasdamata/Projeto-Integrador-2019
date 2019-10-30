@@ -2,6 +2,7 @@
 session_start();
 include_once("conexao1.php");
 
+//Processamento de dados dos projetos inseridos.
 $titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_STRING);
 $descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_STRING);
 
@@ -18,3 +19,5 @@ if(mysqli_insert_id($conn)){
     $_SESSION['msg'] = "<p style ='color:red;'>Projeto não foi cadastrado com sucesso</p>";
     header("Location: indexadm.php");
 }
+
+?>
