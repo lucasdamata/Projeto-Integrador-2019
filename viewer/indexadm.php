@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +84,7 @@ session_start();
 
       ?>
 
-        <form method="POST" action="insereProjeto.php">
+        <form method="POST" action="insercao.php">
         <p class="nome">
             <input type="text" id="nomeid" placeholder="Título do projeto" required="required" name="titulo" />
             

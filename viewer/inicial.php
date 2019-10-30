@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 <!DOCTYPE html>
     <html lang="en">
@@ -63,10 +62,9 @@ session_start();
                         echo $_SESSION['alertSobre'];
                         unset($_SESSION['alertSobre']);
                         }
-
                     ?>
 
-                    <form method="POST" action="inserePaginaInicial.php">
+                    <form method="POST" action="insercao.php">
                         <p class="nome">
                             <input type="text" id="nomeid" placeholder="Título do campo" required="required" name="sobreTitulo" />                
                         </p>
@@ -84,7 +82,41 @@ session_start();
                         </p>
                         <br><br>
                     </form>   
-                </div>         
+                </div>
+                <!-- Inserção de dados no banco para o campo Sobre, na página inicial do site -->
+                <div class = "col-12">
+                    <h5>Inserir dados do campo Sobre (Campo que contém uma pequena imagem)</h5>
+                    <br>
+                    <?php
+
+                        if(isset($_SESSION['alertSobre'])){
+                        echo $_SESSION['alertSobre'];
+                        unset($_SESSION['alertSobre']);
+                        }
+                    ?>
+
+                    <form method="POST" action="insercao.php">
+                        <p class="nome">
+                            <input type="text" id="nomeid" placeholder="Título da sessão" required="required" name="tituloSection" />                
+                        </p>
+                        <p class="nome">
+                            <input type="text" id="nomeid" placeholder="Título do card" required="required" name="tituloCards" />                
+                        </p>
+                    
+
+                    <br> <br>
+
+                    <div class = "col-12">
+                        <p>
+                            <input type="text" name="descricaoCards " placeholder="Descreva este campo">
+                        </p>
+                        <br>
+                        <p class="submit">
+                            <input class="button" type="submit" value="Salvar">
+                        </p>
+                        <br><br>
+                    </form>   
+                </div>      
             </div>
         </div>
 
