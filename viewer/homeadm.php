@@ -19,10 +19,10 @@
                 <div class="nav-wrapper">
                     <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="140" height="60"/></a>
                     <ul id="navbar-items" class="left hide-on-med-and-down">
-                        <li><a id='index' href="indexadm.php">Início</a></li>
+                        <li><a id='index' href="homeadm.php">Início</a></li>
                         <li><a id='index' href="inicial.php">Página Inicial</a></li>
                         <li>
-                        <a class="dropdown-trigger" data-target="dropdown-menu" id= 'portifolio' href="indexadm.php">
+                        <a class="dropdown-trigger" data-target="dropdown-menu" id= 'portifolio' href="projetos.php">
                             Projetos <i class="material-icons right">arrow_drop_down</i>
                         </a>
                         </li>
@@ -31,7 +31,7 @@
                     </ul>
 
                     <ul id="dropdown-menu" class="dropdown-content">
-                        <li><a href="portifolio.php">Todos</a></li>
+                        <li><a href="projetos.php">Todos</a></li>
                         <li><a href="residencial.php">Residencial</a></li>
                         <li><a href="comercial.php">Corporativo</a></li>
                     </ul>
