@@ -53,8 +53,8 @@ session_start();
         <div class ="container">
             <div class = "row">
             <!-- Inserção de dados no banco para o campo Sobre, na página inicial do site -->
-                <div class = "col-12">
-                    <h5>Inserir dados do campo Sobre (Campo que contém uma pequena imagem)</h5>
+                <div class = "col l12">
+                    <h5>Editar dados do campo Sobre</h5>
                     <br>
                     <?php
 
@@ -65,14 +65,29 @@ session_start();
                     ?>
 
                     <form method="POST" action="insercao.php">
+                        <br>
+                        <p>Exemplo do campo Sobre:</p>
+                        <br>
+                        <div class="card-panel grey lighten-5 z-depth-1">
+                            <div class="row valign-wrapper">
+                                <div class="col s2">
+                                    <img src="images/woman.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                </div>
+                                <div class="col s10">
+                                    <span class="black-text"><h2 id="h2">Sobre</h2>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione sed, nemo necessitatibus 
+                                        inventore sapiente doloribus atque molestiae quaerat numquam perspiciatis vero et veniam architecto 
+                                        porro at, molestias ad ipsam saepe.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                         <p class="nome">
                             <input type="text" id="nomeid" placeholder="Título do campo" required="required" name="sobreTitulo" />                
                         </p>
                     
 
                     <br> <br>
-
-                    <div class = "col-12">
                         <p>
                             <input type="text" name="sobreDescricao" placeholder="Descreva este campo">
                         </p>
@@ -80,12 +95,18 @@ session_start();
                         <p class="submit">
                             <input class="button" type="submit" value="Salvar">
                         </p>
-                        <br><br>
-                    </form>   
+                        <br>
+                        <br>
+                        <br>
+
+                    </form>          
                 </div>
-                <!-- Inserção de dados no banco para o campo Sobre, na página inicial do site -->
+
+                
+
+                <!-- Inserção de dados no banco para os cards, na página inicial do site -->
                 <div class = "col-12">
-                    <h5>Inserir dados do campo Sobre (Campo que contém uma pequena imagem)</h5>
+                    <h5>Inserir dados dos cards</h5>
                     <br>
                     <?php
 
@@ -115,6 +136,18 @@ session_start();
                             <input class="button" type="submit" value="Salvar">
                         </p>
                         <br><br>
+                        <p>Exemplo do card:</p>
+                        <br>
+                        <div class="col s12 m4">
+                            <div class="card white-1">
+                                <div class="card-content black-text">
+                                <span class="card-title">Card Title</span>
+                                <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </form>   
                 </div>      
             </div>
