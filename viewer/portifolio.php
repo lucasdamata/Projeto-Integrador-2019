@@ -51,7 +51,7 @@
           </ul>
         </div>
       </nav>
-    </div>
+    </div><hr>
 
       <br>
 
