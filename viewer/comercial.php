@@ -15,10 +15,10 @@
   </head>
 
   <body class="body">
-    <div class="navbar-fixed">
+  <div class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper purple lighten-4">
-          <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="140" height="65"/></a>
+        <div class="nav-wrapper">
+          <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="140" height="60"/></a>
           <ul id="navbar-items" class="left hide-on-med-and-down">
             <li><a id='index' href="index.php">Início</a></li>
             <li>
@@ -26,8 +26,9 @@
                 Projetos <i class="material-icons right">arrow_drop_down</i>
               </a>
             </li>
-            <li><a href="#">Sobre</a></li>
+          
             <li><a href="contato.php">Contato</a></li>
+            <li><a href="curso.php">Curso</a></li>
           </ul>
 
           <ul id="dropdown-menu" class="dropdown-content">
@@ -45,13 +46,12 @@
         <ul id="nav-mobile" class="sidenav">
               <li><a href="index.php">Início</a></li>
               <li><a href="portifolio.php">Projetos</a></li>
-              <li><a href="#">Sobre</a></li>
-              <li><a href="#">Contato</a></li>
+             
+              <li><a href="contato.php">Contato</a></li>
           </ul>
         </div>
       </nav>
     </div>
-
       <br>
 
   
@@ -59,11 +59,11 @@
 <div>
 <br>
 <hr>
-          <h2 id="h2-destaques">Corporativo</h2>
+          <h2 id="h2-destaques">Corporativo</h2><hr>
 
   </nav>
         <div class="row">
-        
+        <h2 id="h3-destaques">Comercial 1</h2>
            <div class="col s23"> <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
                   <img class="activator" src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg">
@@ -77,6 +77,7 @@
                   <p>Here is some more information about this product that is only revealed once clicked on.</p>
                 </div>
               </div> </div>
+              <h2 id="h3-destaques">Comercial 2</h2>
             <div class="col s12"> <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
                   <img class="activator" src="projetos/varandagourmet/Of 01.jpg">
@@ -90,6 +91,7 @@
                   <p>Here is some more information about this product that is only revealed once clicked on.</p>
                 </div>
               </div> </div>
+              <h2 id="h3-destaques">Comercial 3</h2>
             <div class="col s12">
                     <div class="card">
                             <div class="card-image waves-effect waves-block waves-light">
@@ -108,6 +110,7 @@
 
             </div>
             <!--------------------------------------------------------------------------------------------------->
+            <h2 id="h3-destaques">Comercial 4</h2>
             <div class="col s12"> <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                       <img class="activator" src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg">
@@ -121,61 +124,7 @@
                       <p>Here is some more information about this product that is only revealed once clicked on.</p>
                     </div>
                   </div> </div>
-                <div class="col s12"> <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="projetos/varandagourmet/Of 01.jpg">
-                    </div>
-                    <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                      <p><a href="#">This is a link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                      <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Card Title</span>
-                      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    </div>
-                  </div> </div>
-                <div class="col s12">
-                        <div class="card">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                  <img class="activator" src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg">
-                                </div>
-                                <div class="card-content">
-                                  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                                  <p><a href="#">This is a link</a></p>
-                                </div>
-                                <div class="card-reveal">
-                                  <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Card Title</span>
-                                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                                </div>
-                         </div>
-              
-                        </div>
-                        <div class="col s12"> <div class="card">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                  <img class="activator" src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg">
-                                </div>
-                                <div class="card-content">
-                                  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                                  <p><a href="#">This is a link</a></p>
-                                </div>
-                                <div class="card-reveal">
-                                  <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Card Title</span>
-                                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                                </div>
-                              </div> </div>
-                            <div class="col s12"> <div class="card">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                  <img class="activator" src="projetos/varandagourmet/Of 01.jpg">
-                                </div>
-                                <div class="card-content">
-                                  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                                  <p><a href="#">This is a link</a></p>
-                                </div>
-                                <div class="card-reveal">
-                                  <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Card Title</span>
-                                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                                </div>
-                              </div> </div>
+               
                             
                     
         </div>

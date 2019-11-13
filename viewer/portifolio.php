@@ -15,10 +15,10 @@
   </head>
 
   <body class="body">
-    <div class="navbar-fixed">
+  <div class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper purple lighten-4">
-          <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="140" height="65"/></a>
+        <div class="nav-wrapper">
+          <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="140" height="60"/></a>
           <ul id="navbar-items" class="left hide-on-med-and-down">
             <li><a id='index' href="index.php">Início</a></li>
             <li>
@@ -26,8 +26,9 @@
                 Projetos <i class="material-icons right">arrow_drop_down</i>
               </a>
             </li>
-            <li><a href="#">Sobre</a></li>
+           
             <li><a href="contato.php">Contato</a></li>
+            <li><a href="curso.php">Curso</a></li>
           </ul>
 
           <ul id="dropdown-menu" class="dropdown-content">
@@ -45,8 +46,8 @@
         <ul id="nav-mobile" class="sidenav">
               <li><a href="index.php">Início</a></li>
               <li><a href="portifolio.php">Projetos</a></li>
-              <li><a href="#">Sobre</a></li>
-              <li><a href="#">Contato</a></li>
+              
+              <li><a href="contato.php">Contato</a></li>
           </ul>
         </div>
       </nav>
@@ -180,81 +181,33 @@
         </div>
         </div>
         </div>
-        <footer class="page-footer purple lighten-4">
+        <footer class="page-footer"> <style>.page-footer { background: linear-gradient(to right, #847095 ,#A684A5 , #BFAFBA)  }</style>
         <div class="container">
           <div class="row">
-            <div class="col l6 s12">
+            <div class="col s12 m8 l8">
               <h5 class="white-text">Informações Adicionais</h5>
               <ul>
-                <li>
-                  <div class="col l1">
-                  <img src="images/067-phone.png"/>
-                  </div>
-                  <div class="col l6">
-                    <a class="grey-text text-lighten-3">(034) 90000-0000 / (034) 3888-8888</a>
-                  </div>
-                </li>
-              </ul>
-              <br>
-              <ul> 
-                <li>
-                  <div class="col l1">
-                  <img src="images/073-location2.png"/>
-                  </div>
-                  <div class="col l6">
-                    <a class="grey-text text-lighten-3" href="https://www.google.com/maps/dir/-18.5858232,-46.5066368/unipam+maps/@-18.5803057,-46.5151017,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94ae8b2b6cbccdd1:0x13323dbb548c2682!2m2!1d-46.5137325!2d-18.5746726" target="blank_">
-                    Rua Major Gote</a>
-                  </div>
-                </li>
-              </ul>
-              <br>
-              <ul> 
-                <li>
-                  <div class="col l1">
-                  <img src="images/402-facebook2.png"/>
-                  </div>
-                  <div class="col l6">
-                    <a class="grey-text text-lighten-3" href="https://www.facebook.com/Renatavazarquiteta" target="blank_">
-                    /Renatavazarquiteta</a>
-                  </div>
-                </li>
-              </ul>
-              <br>
-              <ul> 
-                <li>
-                  <div class="col l1">
-                  <img src="images/403-instagram.png"/>
-                  </div>
-                  <div class="col l6">
-                    <a class="grey-text text-lighten-3" href="https://www.instagram.com/renata.arquiteta/" target="blank_">
-                    @renata.arquiteta/</a>
-                  </div>
-                </li>
-              </ul>
-              <br>
-              <ul> 
-                <li>
-                  <div class="col l1">
-                  <img src="images/389-mail2.png"/>
-                  </div>
-                  <div class="col l6">
-                    <a class="grey-text text-lighten-3">
-                    renata.arquiteta@live.com</a>
-                  </div>
-                </li>
+                    <li> <img src="images/067-phone.png"/> <a class="grey-text text-lighten-3">(034) 98410-6642</a> </li>
+                    <li> <img src="images/073-location2.png"/> <a class="grey-text text-lighten-3" href="https://www.google.com/maps/dir/R.+Ver.+Chico+Filgueira,+21+-+Cai%C3%A7aras,+Patos+de+Minas+-+MG,+38702-178//@-18.5741074,-46.5164245,17z/data=!4m8!4m7!1m5!1m1!1s0x94ae8b2c8e6bed7f:0xb4d59166dfd9b808!2m2!1d-46.5141185!2d-18.5730251!1m0" target="blank_">
+                    R. Ver. Chico Filgueira, 21 - Caiçaras, Patos de Minas - MG<br></a></li>
+                    <li> <img src="images/403-instagram.png"/> <a class="grey-text text-lighten-3" href="https://www.instagram.com/renata.arquiteta/" target="blank_">
+                    @renata.arquiteta/</a> </li>
+                    <li> <img src="images/389-mail2.png"/> <a class="grey-text text-lighten-3">
+                    atendimento@renatavaz.com</a> </li>
               </ul>
             </div>
-                <div class="col l4 offset-l2 s12">
-                  <h5 class="white-text">Mapa do site</h5>
+            <div class="col s12 m4 l4">
+              <h5 class="white-text">Mapa do site</h5>
                   <ul>
                     <li style="list-style-type:circle; color: black;"><a href="index.php" class="grey-text text-lighten-3">Início</a></li>
                     <li style="list-style-type:circle; color: black;"><a href="portifolio.php" class="grey-text text-lighten-3">Projetos</a></li>
                     <li style="list-style-type:circle; color: black;"><a href="#" class="grey-text text-lighten-3">Sobre</a></li>
-                    <li style="list-style-type:circle; color: black;"><a href="contato.php"class="grey-text text-lighten-3">Contato</a></li>
-                  </ul>
-                </div>
-              </div>
+                    <li style="list-style-type:circle; color: black;"><a href="contato.php" class="grey-text text-lighten-3">Contato</a></li>
+                  </ul>  
             </div>
+          </div>
+        </div>
+                  
         <div class="footer-copyright">
           <div class="container">
             <div class="row">
@@ -265,6 +218,7 @@
           </div>
         </div>
       </footer>
+
     </div>
 
       <!--jquery-->
