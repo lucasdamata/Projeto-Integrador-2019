@@ -169,34 +169,27 @@ session_start();
                     <br> 
 
                 </div>
+            </div>
 
                 <!-- Inserção de dados no banco para os cards, na página inicial do site -->
                 <div class = "col-12">
                     <h5>Sessão de cards</h5>
                     <br>
-                    <?php
-
-                        if(isset($_SESSION['alertSobre'])){
-                        echo $_SESSION['alertSobre'];
-                        unset($_SESSION['alertSobre']);
-                        }
-                    ?>
-
-                    <form method="POST" action="insercao.php">
                         <p>Exemplo dos cards:</p>
                         <section>
                             <div class="container">
                                 <div class="row">
                                     <div class="col s12">
+                                    <form method="POST" action="insereCard.php">
                                         <h2 id="h2">O que fazemos?</h2>
                                         <a href="#novoCard" class="btn red modal-trigger">Novo</a>
                                         <div class="modal modal-fixed-footer" id="novoCard">
                                             <div class="modal-content">
                                                 <h3>Novo card</h3>
-                                                <p class="nome">
+                                                <!--<p class="nome">
                                                     <input type="text" id="nomeid" placeholder="Título da sessão" required="required" name="tituloSection" />                
                                                 </p>
-                                                <br>
+                                                <br>-->
                                                 <p class="nome">
                                                     <input type="text" id="nomeid" placeholder="Título do card" required="required" name="tituloCards" />                
                                                 </p>
@@ -214,7 +207,16 @@ session_start();
                                                 <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
                                             </div>
                                         </div>
+
+                                        <?php
+                                        if(isset($_SESSION['alertCards'])){
+                                        echo $_SESSION['alertCards'];
+                                        unset($_SESSION['alertCards']);
+                                        }
+                                    ?>
+                                    </form>
                                     </div>
+
                                     <div class="col s12 m4">
                                         <div class="card white-1">
                                             <div class="card-content black-text">
