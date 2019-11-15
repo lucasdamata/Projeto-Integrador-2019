@@ -27,7 +27,7 @@
                 Projetos <i class="material-icons right">arrow_drop_down</i>
               </a>
             </li>
-            <li><a href="#">Sobre</a></li>
+            
             <li><a href="contato.php">Contato</a></li>
             <li><a href="curso.php">Curso</a></li>
           </ul>
@@ -47,7 +47,7 @@
         <ul id="nav-mobile" class="sidenav">
               <li><a href="index.php">Início</a></li>
               <li><a href="portifolio.php">Projetos</a></li>
-              <li><a href="#">Sobre</a></li>
+              
               <li><a href="contato.php">Contato</a></li>
           </ul>
         </div>
@@ -65,14 +65,6 @@
         </div>
         <br>
 
-<?php 
-  ob_get_contents();
-  include ("conexao1.php");
-  $consulta = "SELECT * FROM sobreInicial LIMIT 1";
-  $con = $mysqli->query($consulta) or die($mysqli->error);
-?>
-
-<?php while($dados = $con->fetch_array()) { ?>
 <div class="container">
     <div class="col s12 m8 offset-m2 l6 offset-l3">
       <div class="card-panel grey lighten-5 z-depth-1">
@@ -81,24 +73,29 @@
               <img src="images/woman.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
           </div>
           <div class="col s10">
-              <span class="black-text"><h2 id="h2"><?php echo $dados["sobreTitulo"];?></h2>
-                <?php echo $dados["sobreDescricao"];?> 
+              <span class="black-text"><h2 id="h2">Sobre</h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione sed, nemo necessitatibus 
+                inventore sapiente doloribus atque molestiae quaerat numquam perspiciatis vero et veniam architecto 
+                porro at, molestias ad ipsam saepe.
               </span>
           </div>
         </div>
       </div>
     </div>
   </div>
-<?php } ?>
 
         <div>
+          
+        
+          
             <?php
                   require "home.php";
                   echo $conteudo;
+
             ?>
         </div>
-
-      <div> 
+      <div>
+        
         <br>
       </div>
       <section>

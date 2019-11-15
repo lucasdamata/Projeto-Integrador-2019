@@ -15,7 +15,6 @@ session_start();
         <link href="../static/css/bootstrap-table-materialize.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="navbar-fixed">
@@ -53,10 +52,9 @@ session_start();
 
         <div class ="container">
             <div class = "row">
-            <hr>
             <!-- Inserção de dados no banco para o campo Sobre, na página inicial do site -->
                 <div class = "col l12">
-                    <h5>Edição da Página Inicial</h5>
+                    <h5>Editar dados do campo Sobre</h5>
                     <br>
                     <?php
 
@@ -66,115 +64,52 @@ session_start();
                         }
                     ?>
 
-                    
-                        <p>Campo Sobre:</p>
+                    <form method="POST" action="insercao.php">
                         <br>
-                        <?php 
-                        ob_get_contents();
-                        include ("conexao1.php");
-                        $consulta = "SELECT * FROM sobreInicial LIMIT 1";
-                        $con = $mysqli->query($consulta) or die($mysqli->error);
-                        ?>
-
-                        <?php while($dados = $con->fetch_array()) { ?>
+                        <p>Exemplo do campo Sobre:</p>
+                        <br>
                         <div class="card-panel grey lighten-5 z-depth-1">
                             <div class="row valign-wrapper">
                                 <div class="col s2">
                                     <img src="images/woman.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
                                 </div>
                                 <div class="col s10">
-                                    <span class="black-text"><h2 id="h2"><?php echo $dados["sobreTitulo"];?></h2>
-                                        <?php echo $dados["sobreDescricao"];?> 
+                                    <span class="black-text"><h2 id="h2">Sobre</h2>
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione sed, nemo necessitatibus 
+                                        inventore sapiente doloribus atque molestiae quaerat numquam perspiciatis vero et veniam architecto 
+                                        porro at, molestias ad ipsam saepe.
                                     </span>
                                 </div>
                             </div>
                         </div>
-                        <?php } ?>
-                    <form method="POST" action="insercao.php">
-                        <div class="col l1">
-                            <a href="#novoSobre" class="btn red modal-trigger">Novo</a>
-                        </div>
-                        <div class="modal modal-fixed-footer" id="novoSobre">
-                            <div class="modal-content">
-                                <h3>Novo campo</h3>
-                                <p class="nome">
-                                    <input type="text" id="nomeid" placeholder="Título do campo" required="required" name="sobreTitulo" />                
-                                </p>
-                                <br>
-                                <p>
-                                    <input type="text" name="sobreDescricao" placeholder="Descreva este campo">
-                                </p>
-                                <br>
-                                <p class="submit">
-                                    <input class="button" type="submit" value="Salvar">
-                                </p>
-                            </div>
-                            <br>
-                        
-                            <div class="modal-footer">
-                                <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
-                            </div>
-                       </div>
-                    </form>
-            
-                    <form method="POST" action="update.php">
-                        <div class="col l1">
-                            <a href="#editSobre" class="btn red modal-trigger">Editar</a>
-                        </div>
-                        <div class="modal modal-fixed-footer" id="editSobre">
-                            <div class="modal-content">
-                                <h4>Título</h4>
+                        <p class="nome">
+                            <input type="text" id="nomeid" placeholder="Título do campo" required="required" name="sobreTitulo" />                
+                        </p>
+                    
 
-                                <?php 
-                                ob_get_contents();
-                                include ("conexao1.php");
-                                $consulta = "SELECT * FROM sobreInicial WHERE id = '1'";
-                                $con = $mysqli->query($consulta) or die($mysqli->error);
-                                ?>
+                    <br> <br>
+                        <p>
+                            <input type="text" name="sobreDescricao" placeholder="Descreva este campo">
+                        </p>
+                        <br>
+                        <p class="submit">
+                            <input class="button" type="submit" value="Salvar">
+                        </p>
+                        <br>
+                        <br>
+                        <br>
 
-                                
-                                
-                                <?php while($dados = $con->fetch_array()) { ?>
-                                <div class="input-field col s12 nome">
-                                    <textarea id="textarea1" class="materialize-textarea" name="sobreTitulo"><?php echo $dados["sobreTitulo"]?></textarea>                
-                                </div>
-                                <br>
-                                <h4>Descrição</h4>
-                                <div class="input-field col s12">
-                                    <textarea id="textarea1" class="materialize-textarea" name="sobreDescricao"><?php echo $dados["sobreDescricao"] ?></textarea>
-                                </div>
-                                <br>
-                                <p class="submit">
-                                    <input type="submit" class="button" value="Atualizar">
-                                </p>
-                            </div>
-                            <br>
-                        
-                            <div class="modal-footer">
-                                <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
-                            </div>
-                        </div>
-                                <?php } ?>
-                        
-                                <?php
-                                if(isset($_SESSION['alertEditSobre'])){
-                                echo $_SESSION['alertEditSobre'];
-                                unset($_SESSION['alertEditSobre']);
-                                }
-                                ?>
-                    </form>
-                    <br>
-                    <br>
-                    <hr>
-                    <br> 
-
+                    </form>          
                 </div>
             </div>
 
+                
+
                 <!-- Inserção de dados no banco para os cards, na página inicial do site -->
                 <div class = "col-12">
-                    <h5>Sessão de cards</h5>
+                    <h5>Inserir dados dos cards</h5>
                     <br>
+<<<<<<< HEAD
                         <p>Exemplo dos cards:</p>
                         <section>
                             <div class="container">
@@ -395,13 +330,49 @@ session_start();
                                         </div>
                                         <br>
                                     </div>
+=======
+                    <?php
+
+                        if(isset($_SESSION['alertSobre'])){
+                        echo $_SESSION['alertSobre'];
+                        unset($_SESSION['alertSobre']);
+                        }
+                    ?>
+
+                    <form method="POST" action="insercao.php">
+                        <p class="nome">
+                            <input type="text" id="nomeid" placeholder="Título da sessão" required="required" name="tituloSection" />                
+                        </p>
+                        <p class="nome">
+                            <input type="text" id="nomeid" placeholder="Título do card" required="required" name="tituloCards" />                
+                        </p>
+                    
+
+                    <br> <br>
+
+                    <div class = "col-12">
+                        <p>
+                            <input type="text" name="descricaoCards " placeholder="Descreva este campo">
+                        </p>
+                        <br>
+                        <p class="submit">
+                            <input class="button" type="submit" value="Salvar">
+                        </p>
+                        <br><br>
+                        <p>Exemplo do card:</p>
+                        <br>
+                        <div class="col s12 m4">
+                            <div class="card white-1">
+                                <div class="card-content black-text">
+                                <span class="card-title">Card Title</span>
+                                <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+>>>>>>> 9e177e1d64d6e63e56952cb29553247bb02c188b
                                 </div>
                             </div>
-                        </section>
+                        </div>
+
                     </form>   
-                    <br>
-                    <hr>
-                    <br>
                 </div>      
             </div>
         </div>
@@ -429,15 +400,10 @@ session_start();
         <script src="../static/js/bootstrap-table.min.js"></script>
         <script src="../static/js/bootstrap-table-materialize.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script></script>
+        
         <script src="../static/js/bootstrap-table-pt-BR.min.js"></script>
         <script src="../static/js/init.js"></script>
         <script src="../static/js/categoria.js"></script>
         <script src="../static/js/index.js"></script>
-        <script>
-            $(document).ready(function(){
-                $('.modal').modal();
-            });
-        </script>
     </body>
 </html>
