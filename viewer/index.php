@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -67,20 +71,26 @@
 
 <div class="container">
     <div class="col s12 m8 offset-m2 l6 offset-l3">
-      <div class="card-panel grey lighten-5 z-depth-1">
-        <div class="row valign-wrapper">
-          <div class="col s2">
-              <img src="images/woman.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-          </div>
-          <div class="col s10">
-              <span class="black-text"><h2 id="h2">Sobre</h2>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione sed, nemo necessitatibus 
-                inventore sapiente doloribus atque molestiae quaerat numquam perspiciatis vero et veniam architecto 
-                porro at, molestias ad ipsam saepe.
-              </span>
-          </div>
+    <?php 
+      ob_get_contents();
+      include ("conexao1.php");
+      $consulta = "SELECT * FROM sobreInicial LIMIT 1";
+      $con = $mysqli->query($consulta) or die($mysqli->error);
+    ?>                        
+      <?php while($dados = $con->fetch_array()) { ?>
+        <div class="card-panel grey lighten-5 z-depth-1">
+            <div class="row valign-wrapper">
+              <div class="col s2">
+                <img src="images/woman.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+              </div>
+              <div class="col s10">
+                <span class="black-text"><h2 id="h2"><?php echo $dados["sobreTitulo"];?></h2>
+                <?php echo $dados["sobreDescricao"];?> 
+                </span>
+              </div>
+            </div>
         </div>
-      </div>
+      <?php } ?>
     </div>
   </div>
 

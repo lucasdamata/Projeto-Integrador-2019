@@ -84,7 +84,7 @@ session_start();
 
       ?>
 
-        <form method="POST" action="insercao.php">
+        <form method="POST" action="insereProjetos.php">
         <p class="nome">
             <input type="text" id="nomeid" placeholder="Título do projeto" required="required" name="titulo" />
             
@@ -152,9 +152,6 @@ session_start();
         </div>
         </div>
 
-
-
- 
     </form>
     <br> <br>
     <br> <br>
