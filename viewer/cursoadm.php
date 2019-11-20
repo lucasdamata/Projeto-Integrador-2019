@@ -62,7 +62,7 @@
 
 
   <main class="tabelas">
-    <h4>editar conteudo do curso:</h4>
+    <h4>Editar conteudo:</h4>
     <div class="avatar">
       <img src="../static/images/renata.jpg" alt="Renata Vaz" class="avatar">
       <div class="fileUpload btn btn-primary">
@@ -72,32 +72,33 @@
     </div>
     <div class="row" align-content ="center">
     
-        <form  class="col s12" method="post" action="/apsdudu/control/cadastrar.php" id="formularioCad">
-        <input id="codigo" name="codigo" type="hidden">
-            <div class="row">
+        <form  class="col s12" method="post" action="/Projeto-Integrador-2019/control/salvar.php" id="formularioCad">
+        <input id="id" name="id" type="hidden">
+        <div class="row">
                 <div class="input-field col s6">
-                    <input placeholder="" type="text" id="user" name="usuario" class="validate">
-                    <label for="user">Descrição Pessoal:</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <input placeholder="" type="email" id="email" name="email" class="validate">
-                    <label for="email">Breve descrição sobre o curso</label>
+                    <input placeholder="" type="text" id="descricaoP" name="descricaoP" class="validate">
+                    <label for="descricaoC">Descrição Pesoal</label>
                     
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s6">
-                    <input placeholder="" type="password" id="pass" name="senha" class="validate">
-                    <label for="pass">tópicos sobre o conteúdo</label>
+                    <input placeholder="" type="text" id="descricaoC" name="descricaoC" class="validate">
+                    <label for="descricaoC">Breve descrição sobre o curso</label>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="" type="text" id="tituloC" name="tituloC" class="validate">
+                    <label for="tituloC">Título do Curso</label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="input-field col s6">
-                    <input placeholder="" type="password" id="pass" name="senha" class="validate">
-                    <label for="pass">adicionar perguntas e respostas</label>
+                    <input placeholder="" type="text" id="tituloCP" name="tituloCP" class="validate">
+                    <label for="tituloCP">Título do capítulo</label>
                 </div>
             </div>
 
@@ -105,7 +106,7 @@
             <div class="row">
                 <div class="col s6">
                     <div class="right-align">
-                    <button class="waves-effect blue darken-3 btn-small " type="submit" name="action">Cadastrar
+                    <button class="waves-effect blue darken-3 btn-small " type="submit" name="action">Adionar
                         <!--<i class="material-icons left">send</i> -->
                     </button>
                     </div>
@@ -145,37 +146,17 @@
     
   </div>
           
-  <table id="tableCategoria" 
-      class="responsive-table"
-      data-url="control/categoria/todos.php"
-      data-search="true"
-      data-show-refresh="true"
-      data-pagination="true"
-      data-page-list="[10, 25, 50, 100, all]"
-      data-show-footer="true">
-
-        <thead>
-          <tr>
-              <th data-field="idcategoria">Código</th>
-              <th data-field="descricao">Nome</th>
-              <th data-field="idcategoria" data-formatter="editarCategoriaFmt">Editar</th>
-              <th data-field="idcategoria" data-formatter="excluirCategoriaFmt">Excluir</th>
-          </tr>
-        </thead>
-
-        <tbody>
-         
-        </tbody>
- </table>
 
 
   </main>
-  <script src="../static/js/materialize.js"></script>
-      <script src="../static/js/bootstrap-table.min.js"></script>
-      <script src="../static/js/bootstrap-table-materialize.min.js"></script>
-      <script src="../static/js/bootstrap-table-pt-BR.min.js"></script>
-      <script src="../static/js/init.js"></script>
-      <script src="../static/js/categoria.js"></script>
-      <script src="../static/js/index.js"></script>
+  
+  <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/materialize.js"></script>
+    <script src="../static/js/bootstrap-table.min.js"></script>
+    <script src="../static/js/bootstrap-table-materialize.min.js"></script>
+    <script src="../static/js/bootstrap-table-pt-BR.min.js"></script>
+    <script src="../static/js/init.js"></script>
+    <script src="../static/js/cadastro.js"></script>
+    <script src="../static/js/categoria.js"></script>
   </body>
 </html>
