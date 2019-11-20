@@ -2,18 +2,19 @@
 session_start();
 include_once("conexao1.php");
 
-//inserção tabela cardsInicial
-$tituloCards = filter_input(INPUT_POST, 'tituloCards', FILTER_SANITIZE_STRING);
-$descricaoCards = filter_input(INPUT_POST, 'descricaoCards', FILTER_SANITIZE_STRING);
+//inserção tabela sobre
+$cardTitulo = filter_input(INPUT_POST, 'cardTitulo', FILTER_SANITIZE_STRING);
+$cardDescricao = filter_input(INPUT_POST, 'cardDescricao', FILTER_SANITIZE_STRING);
 
-$resultadoCard = "INSERT INTO cardsInicial (tituloCards, descricaoCards, created) VALUES ('$tituloCards', '$descricaoCards', NOW())";
-$resultadoUser = mysqli_query($conn, $resultadoCard);
+$resultado = "INSERT INTO cardInicial (cardTitulo, cardDescricao, created) VALUES ('$cardTitulo', '$cardDescricao', NOW())";
+$resultado_user = mysqli_query($conn, $resultado);
 
 if(mysqli_insert_id($conn)){
-    $_SESSION['alertCards'] = "<p style ='color:green;'>Informações do campo cadastradas com sucesso.</p>";
+    $_SESSION['alertCard'] = "<p style ='color:green;'>Card cadastrado com sucesso.</p>";
     header("Location:inicial.php");
 }else{
-    $_SESSION['alertCards'] = "<p style ='color:red;'>Informações não foram cadastradas com sucesso.</p>";
+    $_SESSION['alertCard'] = "<p style ='color:red;'>Card não foi cadastrado com sucesso.</p>";
     header("Location:inicial.php");
 }
+
 ?>

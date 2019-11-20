@@ -112,35 +112,67 @@ session_start();
         <div class="container">
           <div class="row">
             <div class="col s12">
-              <h2 id="h2">O que fazemos?</h2>
+              <?php 
+                ob_get_contents();
+                include ("conexao1.php");
+                $consulta = "SELECT * FROM sessao WHERE id = '1'";
+                $con = $mysqli->query($consulta) or die($mysqli->error);
+              ?>
+                            
+              <?php while($dados = $con->fetch_array()) { ?>
+                  <h2 id="h2"><?php echo $dados["tituloSessao"] ?></h2>
+              <?php } ?>
             </div>
             <div class="col s12 m4">
-              <div class="card white-1">
-                <div class="card-content black-text">
-                  <span class="card-title">Card Title</span>
-                  <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
-                </div>
-              </div>
+              <?php 
+              ob_get_contents();
+              include ("conexao1.php");
+              $consulta = "SELECT * FROM cardInicial WHERE id = '1'";
+              $con = $mysqli->query($consulta) or die($mysqli->error);
+              ?>
+
+              <?php while($dados = $con->fetch_array()) { ?>
+                <div class="card white-1">
+                    <div class="card-content black-text">
+                      <span class="card-title"><?php echo $dados["cardTitulo"] ?></span>
+                      <p><?php echo $dados["cardDescricao"] ?></p>
+                    </div>
+                  </div>
+                <?php } ?>
             </div>
             <div class="col s12 m4">
-              <div class="card white-1">
-                <div class="card-content black-text">
-                  <span class="card-title">Card Title</span>
-                  <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
-                </div>
-              </div>
+              <?php 
+                ob_get_contents();
+                include ("conexao1.php");
+                $consulta = "SELECT * FROM cardInicial WHERE id = '2'";
+                $con = $mysqli->query($consulta) or die($mysqli->error);
+              ?>
+
+                <?php while($dados = $con->fetch_array()) { ?>
+                  <div class="card white-1">
+                    <div class="card-content black-text">
+                      <span class="card-title"><?php echo $dados["cardTitulo"] ?></span>
+                      <p><?php echo $dados["cardDescricao"] ?></p>
+                    </div>
+                  </div>
+                <?php } ?>
             </div>
             <div class="col s12 m4">
-              <div class="card white-1">
-                <div class="card-content black-text">
-                  <span class="card-title">Card Title</span>
-                  <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
-                </div>
-              </div>
-              <br>
+              <?php 
+                ob_get_contents();
+                include ("conexao1.php");
+                $consulta = "SELECT * FROM cardInicial WHERE id = '3'";
+                $con = $mysqli->query($consulta) or die($mysqli->error);
+              ?>
+
+                <?php while($dados = $con->fetch_array()) { ?>
+                  <div class="card white-1">
+                    <div class="card-content black-text">
+                      <span class="card-title"><?php echo $dados["cardTitulo"] ?></span>
+                      <p><?php echo $dados["cardDescricao"] ?></p>
+                    </div>
+                  </div>
+                <?php } ?>
             </div>
             <br>
             <div align="center">

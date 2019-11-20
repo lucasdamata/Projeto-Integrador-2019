@@ -53,20 +53,69 @@ session_start();
 
         <div class ="container">
             <div class = "row">
-            <hr>
+                <div class = "col m12">
+                    <h4>Edição da Página Inicial</h4>
+                </div>
             <!-- Inserção de dados no banco para o campo Sobre, na página inicial do site -->
-                <div class = "col l12">
-                    <h5>Edição da Página Inicial</h5>
+                
+                <div class="col m12">
+                    <hr>
+                    <h5>Carrousel</h5>
+                    <div class="carousel carousel-slider">
+                        <a class="carousel-item"><img id="img-carrossel" class="img-responsive" src="images/19.png"></a>
+                        <a class="carousel-item"><img id="img-carrossel" class="img-responsive" src="images/Of 02.jpg"></a>
+                        <a class="carousel-item"><img id="img-carrossel" class="img-responsive" src="images/16.png"></a>
+                        <div class="carousel-fixed-item center">
+                            <a class="btn waves-effect white grey-text darken-text-2 preview"><</a>
+                            <a class="btn waves-effect white grey-text darken-text-2 next">></a>
+                        </div>
+                    </div>
+
                     <br>
+
+                    <!-- Inserção de imagens do carrousel. -->
+
+                    <form method="POST" action="upload.php" enctype="multipart/form-data">
+                        <div class="col m2">
+                            <a href="#novoImagem" class="btn red modal-trigger">Nova Imagem</a>
+                        </div>
+                        <div class="modal modal-fixed-footer" id="novoImagem">
+                            <div class="modal-content">
+                                <h3>Nova imagem</h3>
+                                <br>
+                                    <div class="file-field input-field">
+                                        <div class="btn">
+                                            <span>Escolher arquivo</span>
+                                            <input type="file" name="arquivo">
+                                        </div>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text">
+                                        </div>
+                                        <br>
+                                        <p class="submit">
+                                            <input class="button" type="submit" value="Cadastrar">
+                                        </p>
+                                    </div>
+                            </div>
+                            <br>
+                            <div class="modal-footer">
+                                <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
+                            </div>
+                       </div>
+                    </form>
+
+                </div>
+                    <br>
+                <div class="col m12">
                     <?php
                         if(isset($_SESSION['alertSobre'])){
                         echo $_SESSION['alertSobre'];
                         unset($_SESSION['alertSobre']);
                         }
                     ?>
-
                     
-                        <p>Campo Sobre:</p>
+                    <hr>
+                        <h5>Campo Sobre</h5>
                         <br>
                         <?php 
                         ob_get_contents();
@@ -168,9 +217,12 @@ session_start();
                                 ?>
                     </form>
                     <br>
+                    <hr>
                     <br>
 
                 </div>
+            </div>
+                
 
                 <!-- Inserção de dados no banco para os cards, na página inicial do site -->
                 <div class = "col-12">
@@ -183,216 +235,325 @@ session_start();
                         }
                     ?>
 
-                    <form method="POST" action="insercao.php">
+                    
                         <p>Exemplo dos cards:</p>
                         <section>
                             <div class="container">
                                 <div class="row">
+                                    <!-- Cria título para a seção -->
                                     <div class="col s12">
-                                        <h2 id="h2">O que fazemos?</h2>
-                                        <a href="#novoCard" class="btn red modal-trigger">Novo</a>
-                                        <div class="modal modal-fixed-footer" id="novoCard">
-                                            <div class="modal-content">
-                                                <h3>Novo card</h3>
-                                                <p class="nome">
-                                                    <input type="text" id="nomeid" placeholder="Título da sessão" required="required" name="tituloSection" />                
-                                                </p>
-                                                <br>
-                                                <p class="nome">
-                                                    <input type="text" id="nomeid" placeholder="Título do card" required="required" name="tituloCards" />                
-                                                </p>
-                                                <br>
-                                                <p>
-                                                    <input type="text" name="descricaoCards " placeholder="Descreva este campo">
-                                                </p>
-                                                <br>
-                                                <p class="submit">
-                                                    <input class="button" type="submit" value="Salvar">
-                                                </p>
+                                    <?php 
+                                        ob_get_contents();
+                                        include ("conexao1.php");
+                                        $consulta = "SELECT * FROM sessao WHERE id = '1'";
+                                        $con = $mysqli->query($consulta) or die($mysqli->error);
+                                        ?>
+
+                                        <?php while($dados = $con->fetch_array()) { ?>
+                                        <h2 id="h2"><?php echo $dados["tituloSessao"] ?></h2>
+                                    <?php } ?>
+
+                                        <!--
+                                        <form method="POST" action="insereSessao.php">
+                                            <div class="col l4">
+                                                <a href="#newTitle" class="btn red modal-trigger">Novo</a>
                                             </div>
-                                            <br>
-                                            <div class="modal-footer">
-                                                <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
+                                            <div class="modal modal-fixed-footer" id="newTitle">
+                                                <div class="modal-content">
+                                                    <h3>Novo campo</h3>
+                                                    <p class="nome">
+                                                        <input type="text" id="nomeid" placeholder="Título da sessão" required="required" name="tituloSessao" />                
+                                                    </p>
+                                                    <br>
+                                                    <p class="submit">
+                                                        <input class="button" type="submit" value="Salvar">
+                                                    </p>
+                                                </div>
+                                                <br>
+                                            
+                                                <div class="modal-footer">
+                                                    <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
+                                                </div>
                                             </div>
-                                        </div>
+                                        
+
+                                            <?php
+                                                //if(isset($_SESSION['alertSobre'])){
+                                                //echo $_SESSION['alertSessao'];
+                                                //unset($_SESSION['alertSessao']);
+                                                //}
+                                            ?>
+                                        </form>
+                                        -->
+
+                                        <form method="POST" action="updateSessao.php">    
+                                            <div class="col m4">
+                                                <?php
+                                                if(isset($_SESSION['alertEditTitulo'])){
+                                                echo $_SESSION['alertEditTitulo'];
+                                                unset($_SESSION['alertEditTitulo']);
+                                                }
+                                                ?>
+                                                <a href="#editTitulo" class="btn red modal-trigger">Editar</a>
+                                            </div>
+                                            <div class="modal modal-fixed-footer" id="editTitulo">
+                                                <div class="modal-content">
+                                                    <h3>Editar título</h3>
+                                                    <?php 
+                                                    ob_get_contents();
+                                                    include ("conexao1.php");
+                                                    $consulta = "SELECT * FROM sessao WHERE id = '1'";
+                                                    $con = $mysqli->query($consulta) or die($mysqli->error);
+                                                    ?>
+
+
+                                                    <?php while($dados = $con->fetch_array()) { ?>
+                                                    <input type="hidden" name="id" value="<?php echo $dados["id"] ?>">
+                                                    <div class="input-field col s12 nome">
+                                                        <textarea id="textarea1" class="materialize-textarea" name="tituloSessao"><?php echo $dados["tituloSessao"]?></textarea>                
+                                                    </div>
+                                                    <br>
+                                                    <p class="submit">
+                                                        <input type="submit" class="button" name="btn-editarTitulo" value="Atualizar">
+                                                    </p>
+                                                </div>
+                                                <br>
+                                                <div class="modal-footer">
+                                                    <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
+                                                </div>
+                                            </div>
+
+                                                <?php } ?>
+
+                                        </form>
                                     </div>
+
+                                    <!-- Cria cards para a seção -->
                                     <div class="col s12 m4">
+                                        <?php 
+                                        ob_get_contents();
+                                        include ("conexao1.php");
+                                        $consulta = "SELECT * FROM cardInicial WHERE id = '1'";
+                                        $con = $mysqli->query($consulta) or die($mysqli->error);
+                                        ?>
+
+                                        <?php while($dados = $con->fetch_array()) { ?>
                                         <div class="card white-1">
                                             <div class="card-content black-text">
-                                                <span class="card-title">Card Title</span>
-                                                <p>I am a very simple card. I am good at containing small bits of information.
-                                                    I am convenient because I require little markup to use effectively.</p>
+                                                <span class="card-title"><?php echo $dados["cardTitulo"] ?></span>
+                                                <p><?php echo $dados["cardDescricao"] ?></p>
                                             </div>
                                         </div>
-                                        <a href="#novoCard" class="btn red modal-trigger">Novo</a>
-                                        <div class="modal modal-fixed-footer" id="novoCard">
-                                            <div class="modal-content">
-                                                <h3>Novo card</h3>
-                                                <p class="nome">
-                                                    <input type="text" id="nomeid" placeholder="Título da sessão" required="required" name="tituloSection" />                
-                                                </p>
-                                                <br>
-                                                <p class="nome">
-                                                    <input type="text" id="nomeid" placeholder="Título do card" required="required" name="tituloCards" />                
-                                                </p>
-                                                <br>
-                                                <p>
-                                                    <input type="text" name="descricaoCards " placeholder="Descreva este campo">
-                                                </p>
-                                                <br>
-                                                <p class="submit">
-                                                    <input class="button" type="submit" value="Salvar">
-                                                </p>
+                                        <?php } ?>
+                                        
+                                        <!--
+                                        <form method="POST" action="insereCard.php">
+                                            <?//php
+                                            //if(isset($_SESSION['alertCard'])){
+                                            //echo $_SESSION['alertCard'];
+                                            //unset($_SESSION['alertCard']);
+                                            //}
+                                            ?>
+                                            <div class="col m4">
+                                                <a href="#novoCard" class="btn red modal-trigger">Novo</a>
                                             </div>
-                                            <br>
-                                            <div class="modal-footer">
-                                                <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
-                                            </div>
-                                        </div>
-                                        <a href="#novoCard" class="btn red modal-trigger">Editar</a>
-                                        <div class="modal modal-fixed-footer" id="novoCard">
-                                            <div class="modal-content">
-                                                <h3>Novo card</h3>
-                                                <p class="nome">
-                                                    <input type="text" id="nomeid" placeholder="Título da sessão" required="required" name="tituloSection" />                
-                                                </p>
+                                            <div class="modal modal-fixed-footer" id="novoCard">
+                                                <div class="modal-content">
+                                                    <h3>Novo campo</h3>
+                                                    <p class="nome">
+                                                        <input type="text" id="nomeid" placeholder="Título do card" required="required" name="cardTitulo" />                
+                                                    </p>
+                                                    <br>
+                                                    <p>
+                                                        <input type="text" name="cardDescricao" placeholder="Descreva este campo">
+                                                    </p>
+                                                    <br>
+                                                    <p class="submit">
+                                                        <input class="button" type="submit" value="Salvar">
+                                                    </p>
+                                                </div>
                                                 <br>
-                                                <p class="nome">
-                                                    <input type="text" id="nomeid" placeholder="Título do card" required="required" name="tituloCards" />                
-                                                </p>
-                                                <br>
-                                                <p>
-                                                    <input type="text" name="descricaoCards " placeholder="Descreva este campo">
-                                                </p>
-                                                <br>
-                                                <p class="submit">
-                                                    <input class="button" type="submit" value="Salvar">
-                                                </p>
+                                            
+                                                <div class="modal-footer">
+                                                    <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
+                                                </div>
                                             </div>
-                                            <br>
-                                            <div class="modal-footer">
-                                                <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
+                                        </form>
+                                        -->
+                                        <form method="POST" action="updateSessao.php">    
+                                            <div class="col m4">
+                                                <a href="#editCard1" class="btn red modal-trigger">Editar</a>
                                             </div>
-                                        </div>
+                                            <div class="modal modal-fixed-footer" id="editCard1">
+                                                <div class="modal-content">
+                                                    <h3>Editar card</h3>
+                                                    <?php 
+                                                    ob_get_contents();
+                                                    include ("conexao1.php");
+                                                    $consulta = "SELECT * FROM cardInicial WHERE id = '1'";
+                                                    $con = $mysqli->query($consulta) or die($mysqli->error);
+                                                    ?>
+
+
+                                                    <?php while($dados = $con->fetch_array()) { ?>
+                                                    <input type="hidden" name="id" value="<?php echo $dados["id"] ?>">
+                                                    <div class="input-field col s12 nome">
+                                                        <textarea id="textarea1" class="materialize-textarea" name="cardTitulo"><?php echo $dados["cardTitulo"]?></textarea>                
+                                                    </div>
+                                                    <br>
+                                                    <h4>Descrição</h4>
+                                                    <div class="input-field col s12">
+                                                        <textarea id="textarea1" class="materialize-textarea" name="cardDescricao"><?php echo $dados["cardDescricao"] ?></textarea>
+                                                    </div>
+                                                    <br>
+                                                    <p class="submit">
+                                                        <input type="submit" class="button" name="btn-editar1" value="Atualizar">
+                                                    </p>
+                                                </div>
+                                                <br>
+                                                <div class="modal-footer">
+                                                    <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
+                                                </div>
+                                            </div>
+
+                                                <?php } ?>
+                        
+                                                <?php
+                                                if(isset($_SESSION['alertEditCard1'])){
+                                                echo $_SESSION['alertEditCard1'];
+                                                unset($_SESSION['alertEditCard1']);
+                                                }
+                                                ?>
+                                        </form>
+                                    </div>
+
+                                    <div class="col s12 m4">
+                                        <?php 
+                                            ob_get_contents();
+                                            include ("conexao1.php");
+                                            $consulta = "SELECT * FROM cardInicial WHERE id = '2'";
+                                            $con = $mysqli->query($consulta) or die($mysqli->error);
+                                            ?>
+
+                                            <?php while($dados = $con->fetch_array()) { ?>
+                                            <div class="card white-1">
+                                                <div class="card-content black-text">
+                                                    <span class="card-title"><?php echo $dados["cardTitulo"] ?></span>
+                                                    <p><?php echo $dados["cardDescricao"] ?></p>
+                                                </div>
+                                            </div>
+                                        <?php } ?>
+
+                                        <form method="POST" action="updateSessao.php">    
+                                            <div class="col m4">
+                                                <a href="#editCard2" class="btn red modal-trigger">Editar</a>
+                                            </div>
+                                            <div class="modal modal-fixed-footer" id="editCard2">
+                                                <div class="modal-content">
+                                                    <h3>Editar card</h3>
+                                                    <?php 
+                                                    ob_get_contents();
+                                                    include ("conexao1.php");
+                                                    $consulta = "SELECT * FROM cardInicial WHERE id = '2'";
+                                                    $con = $mysqli->query($consulta) or die($mysqli->error);
+                                                    ?>
+
+
+                                                    <?php while($dados = $con->fetch_array()) { ?>
+                                                    <input type="hidden" name="id" value="<?php echo $dados["id"] ?>">
+                                                    <div class="input-field col s12 nome">
+                                                        <textarea id="textarea1" class="materialize-textarea" name="cardTitulo"><?php echo $dados["cardTitulo"]?></textarea>                
+                                                    </div>
+                                                    <br>
+                                                    <h4>Descrição</h4>
+                                                    <div class="input-field col s12">
+                                                        <textarea id="textarea1" class="materialize-textarea" name="cardDescricao"><?php echo $dados["cardDescricao"] ?></textarea>
+                                                    </div>
+                                                    <br>
+                                                    <p class="submit">
+                                                        <input type="submit" class="button" name="btn-editar2" value="Atualizar">
+                                                    </p>
+                                                </div>
+                                                <br>
+                                                <div class="modal-footer">
+                                                    <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
+                                                </div>
+                                            </div>
+
+                                                <?php } ?>
+                        
+                                                <?php
+                                                if(isset($_SESSION['alertEditCard2'])){
+                                                echo $_SESSION['alertEditCard2'];
+                                                unset($_SESSION['alertEditCard2']);
+                                                }
+                                                ?>
+                                        </form>
                                     </div>
                                     <div class="col s12 m4">
-                                        <div class="card white-1">
-                                            <div class="card-content black-text">
-                                                <span class="card-title">Card Title</span>
-                                                <p>I am a very simple card. I am good at containing small bits of information.
-                                                I am convenient because I require little markup to use effectively.</p>
+                                        <?php 
+                                            ob_get_contents();
+                                            include ("conexao1.php");
+                                            $consulta = "SELECT * FROM cardInicial WHERE id = '3'";
+                                            $con = $mysqli->query($consulta) or die($mysqli->error);
+                                            ?>
+
+                                            <?php while($dados = $con->fetch_array()) { ?>
+                                            <div class="card white-1">
+                                                <div class="card-content black-text">
+                                                    <span class="card-title"><?php echo $dados["cardTitulo"] ?></span>
+                                                    <p><?php echo $dados["cardDescricao"] ?></p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <a href="#novoCard" class="btn red modal-trigger">Novo</a>
-                                        <div class="modal modal-fixed-footer" id="novoCard">
-                                            <div class="modal-content">
-                                                <h3>Novo card</h3>
-                                                <p class="nome">
-                                                    <input type="text" id="nomeid" placeholder="Título da sessão" required="required" name="tituloSection" />                
-                                                </p>
-                                                <br>
-                                                <p class="nome">
-                                                    <input type="text" id="nomeid" placeholder="Título do card" required="required" name="tituloCards" />                
-                                                </p>
-                                                <br>
-                                                <p>
-                                                    <input type="text" name="descricaoCards " placeholder="Descreva este campo">
-                                                </p>
-                                                <br>
-                                                <p class="submit">
-                                                    <input class="button" type="submit" value="Salvar">
-                                                </p>
+                                        <?php } ?>
+
+                                        <form method="POST" action="updateSessao.php">    
+                                            <div class="col m4">
+                                                <a href="#editCard3" class="btn red modal-trigger">Editar</a>
                                             </div>
-                                            <br>
-                                            <div class="modal-footer">
-                                                <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
-                                            </div>
-                                        </div>
-                                        <a href="#novoCard" class="btn red modal-trigger">Editar</a>
-                                        <div class="modal modal-fixed-footer" id="novoCard">
-                                            <div class="modal-content">
-                                                <h3>Novo card</h3>
-                                                <p class="nome">
-                                                    <input type="text" id="nomeid" placeholder="Título da sessão" required="required" name="tituloSection" />                
-                                                </p>
+                                            <div class="modal modal-fixed-footer" id="editCard3">
+                                                <div class="modal-content">
+                                                    <h3>Editar card</h3>
+                                                    <?php 
+                                                    ob_get_contents();
+                                                    include ("conexao1.php");
+                                                    $consulta = "SELECT * FROM cardInicial WHERE id = '3'";
+                                                    $con = $mysqli->query($consulta) or die($mysqli->error);
+                                                    ?>
+
+
+                                                    <?php while($dados = $con->fetch_array()) { ?>
+                                                    <input type="hidden" name="id" value="<?php echo $dados["id"] ?>">
+                                                    <div class="input-field col s12 nome">
+                                                        <textarea id="textarea1" class="materialize-textarea" name="cardTitulo"><?php echo $dados["cardTitulo"]?></textarea>                
+                                                    </div>
+                                                    <br>
+                                                    <h4>Descrição</h4>
+                                                    <div class="input-field col s12">
+                                                        <textarea id="textarea1" class="materialize-textarea" name="cardDescricao"><?php echo $dados["cardDescricao"] ?></textarea>
+                                                    </div>
+                                                    <br>
+                                                    <p class="submit">
+                                                        <input type="submit" class="button" name="btn-editar3" value="Atualizar">
+                                                    </p>
+                                                </div>
                                                 <br>
-                                                <p class="nome">
-                                                    <input type="text" id="nomeid" placeholder="Título do card" required="required" name="tituloCards" />                
-                                                </p>
-                                                <br>
-                                                <p>
-                                                    <input type="text" name="descricaoCards " placeholder="Descreva este campo">
-                                                </p>
-                                                <br>
-                                                <p class="submit">
-                                                    <input class="button" type="submit" value="Salvar">
-                                                </p>
+                                                <div class="modal-footer">
+                                                    <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
+                                                </div>
                                             </div>
-                                            <br>
-                                            <div class="modal-footer">
-                                                <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
-                                            </div>
-                                        </div>
+
+                                                <?php } ?>
+                        
+                                                <?php
+                                                if(isset($_SESSION['alertEditCard3'])){
+                                                echo $_SESSION['alertEditCard3'];
+                                                unset($_SESSION['alertEditCard3']);
+                                                }
+                                                ?>
+                                        </form>
                                     </div>
-                                    <div class="col s12 m4">
-                                        <div class="card white-1">
-                                            <div class="card-content black-text">
-                                            <span class="card-title">Card Title</span>
-                                            <p>I am a very simple card. I am good at containing small bits of information.
-                                            I am convenient because I require little markup to use effectively.</p>
-                                            </div>
-                                        </div>
-                                        <a href="#novoCard" class="btn red modal-trigger">Novo</a>
-                                        <div class="modal modal-fixed-footer" id="novoCard">
-                                            <div class="modal-content">
-                                                <h3>Novo card</h3>
-                                                <p class="nome">
-                                                    <input type="text" id="nomeid" placeholder="Título da sessão" required="required" name="tituloSection" />                
-                                                </p>
-                                                <br>
-                                                <p class="nome">
-                                                    <input type="text" id="nomeid" placeholder="Título do card" required="required" name="tituloCards" />                
-                                                </p>
-                                                <br>
-                                                <p>
-                                                    <input type="text" name="descricaoCards " placeholder="Descreva este campo">
-                                                </p>
-                                                <br>
-                                                <p class="submit">
-                                                    <input class="button" type="submit" value="Salvar">
-                                                </p>
-                                            </div>
-                                            <br>
-                                            <div class="modal-footer">
-                                                <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
-                                            </div>
-                                        </div>
-                                        <a href="#novoCard" class="btn red modal-trigger">Editar</a>
-                                        <div class="modal modal-fixed-footer" id="novoCard">
-                                            <div class="modal-content">
-                                                <h3>Novo card</h3>
-                                                <p class="nome">
-                                                    <input type="text" id="nomeid" placeholder="Título da sessão" required="required" name="tituloSection" />                
-                                                </p>
-                                                <br>
-                                                <p class="nome">
-                                                    <input type="text" id="nomeid" placeholder="Título do card" required="required" name="tituloCards" />                
-                                                </p>
-                                                <br>
-                                                <p>
-                                                    <input type="text" name="descricaoCards " placeholder="Descreva este campo">
-                                                </p>
-                                                <br>
-                                                <p class="submit">
-                                                    <input class="button" type="submit" value="Salvar">
-                                                </p>
-                                            </div>
-                                            <br>
-                                            <div class="modal-footer">
-                                                <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
-                                            </div>
-                                        </div>
-                                        <br>
+                                    <br>
                                     </div>
                                 </div>
                             </div>
@@ -401,7 +562,11 @@ session_start();
                     <br>
                     <hr>
                     <br>
-                </div>      
+                </div> 
+
+                
+
+
             </div>
         </div>
 
@@ -436,6 +601,33 @@ session_start();
             $(document).ready(function(){
                 $('.modal').modal();
             });
+        </script>
+
+        <script>
+        $(document).ready(function(){
+            $(document).ready(function(){
+            $('.carousel').carousel({
+                padding: 5,
+                indicators: true,
+                fullWidth: true
+            });
+            autoplay();
+            function autoplay(){
+                $('.carousel').carousel('next');
+                setTimeout(autoplay, 5000);
+            }
+            });
+            
+            $('.next').click(function(){
+            $('.carousel').carousel('next');
+            });
+
+            $('.preview').click(function(){
+            $('.carousel').carousel('prev');
+            });
+        });
+            
+
         </script>
     </body>
 </html>
