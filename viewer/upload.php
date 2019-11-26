@@ -58,7 +58,7 @@
 					nome_imagem) VALUES('$nome_final')");
 					echo "
 						<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost/Projeto-Integrador-2019/viewer/inicial.php'>
-          	<p style ='color:green;'>Imagem salva com sucesso.</p>";	
+          				<p style ='color:green;'>Imagem salva com sucesso.</p>";	
 				}else{
 					//Upload não efetuado com sucesso, exibe a mensagem
 					//echo "

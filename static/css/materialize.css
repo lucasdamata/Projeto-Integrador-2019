@@ -2715,7 +2715,7 @@ i.medium {
 }
 
 i.large {
-  font-size: 6rem;
+  font-size: 2rem !important;
 }
 
 img.responsive-img,
@@ -8409,8 +8409,9 @@ input[type=range]::-ms-thumb {
 }
 
 .carousel .carousel-item > img {
-  width: 100%;
-  height: 65vh !important;
+  max-width: auto;
+  max-height: 640px;
+
 
 }
 

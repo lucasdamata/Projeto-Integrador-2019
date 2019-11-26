@@ -61,20 +61,31 @@ session_start();
                 <div class="col m12">
                     <hr>
                     <h5>Carrousel</h5>
-                    <div class="carousel carousel-slider">
-                        <a class="carousel-item"><img id="img-carrossel" class="img-responsive" src="images/19.png"></a>
-                        <a class="carousel-item"><img id="img-carrossel" class="img-responsive" src="images/Of 02.jpg"></a>
-                        <a class="carousel-item"><img id="img-carrossel" class="img-responsive" src="images/16.png"></a>
-                        <div class="carousel-fixed-item center">
-                            <a class="btn waves-effect white grey-text darken-text-2 preview"><</a>
-                            <a class="btn waves-effect white grey-text darken-text-2 next">></a>
-                        </div>
-                    </div>
+                    <?php
+                        include ("conexao1.php");
+                        $controle_ativo = 2;
+                        $result_carousel = "SELECT * FROM arquivo ORDER BY id ASC";
+                        $resultado_carousel = mysqli_query($conn, $result_carousel);
+                        while($row_carousel = mysqli_fetch_assoc($resultado_carousel)){
+                            if($controle_ativo == 2){ ?>
+                                <div class="carousel carousel-slider">
+                                    <a class="carousel-item"><img id="img-carrossel" class="img-responsive" src="foto/<?php echo $row_carousel['nome_imagem'] ?>"></a>
+                                    <a class="carousel-item"><img id="img-carrossel" class="img-responsive" src="foto/<?php echo $row_carousel['nome_imagem'] ?>"></a>
+                                    <a class="carousel-item"><img id="img-carrossel" class="img-responsive" src="foto/<?php echo $row_carousel['nome_imagem'] ?>"></a>
+                                </div>
+
+                                <?php
+                                    $controle_ativo = 1;
+                                ?>
+
+                                <?php
+                            }
+                        }
+                    ?>
 
                     <br>
 
                     <!-- Inserção de imagens do carrousel. -->
-
                     <form method="POST" action="upload.php" enctype="multipart/form-data">
                         <div class="col m2">
                             <a href="#novoImagem" class="btn red modal-trigger">Nova Imagem</a>
@@ -104,6 +115,51 @@ session_start();
                        </div>
                     </form>
 
+                    <!-- Tabela com imagens do carrousel. -->
+                    <form method="POST" action="deletar.php" enctype="multipart/form-data">
+                        <div class="col m5">
+                            <a href="#gerenciar" class="btn red modal-trigger">Gerenciar Carrossel</a>
+                        </div>
+                        <div class="modal modal-fixed-footer" id="gerenciar">
+                            <div class="modal-content">
+                                <h3>Gerenciar carrossel</h3>
+                                <br>
+                                <?php   ob_get_contents();
+                                        include ("conexao1.php");
+                                        $consulta = "SELECT * FROM arquivo LIMIT 10";
+                                        $con = $mysqli->query($consulta) or die($mysqli->error);
+                                        ?>
+
+                                        
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ID Imagem</th>
+                                            <th>Nome</th>
+                                            <th>Excluir</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <?php while($dados = $con->fetch_array()) { ?>
+                                            <tr>
+                                                <td><?php echo $dados["id"];?></td>
+                                                <td><?php echo $dados["nome_imagem"];?></td>
+                                                <td>
+
+                                                <div class="submit">
+                                                    <input type="submit" class="btn red" name="btn-delete" value="Excluir">
+                                                </div>
+                                            </tr>
+                                            <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <br>
+                            <div class="modal-footer">
+                                <a href="#" class="modal-close waves-red btn-flat"><i class="large material-icons">cancel</i></a>
+                            </div>
+                       </div>
+                    </form>
                 </div>
                     <br>
                 <div class="col m12">
@@ -120,7 +176,7 @@ session_start();
                         <?php 
                         ob_get_contents();
                         include ("conexao1.php");
-                        $consulta = "SELECT * FROM sobreInicial LIMIT 1";
+                        $consulta = "SELECT * FROM sobreinicial LIMIT 1";
                         $con = $mysqli->query($consulta) or die($mysqli->error);
                         ?>
 
@@ -139,7 +195,7 @@ session_start();
                         </div>
                         <?php } ?>
                         
-                    <!--
+                    
                     <form method="POST" action="insercao.php">
                         <div class="col l1">
                             <a href="#novoSobre" class="btn red modal-trigger">Novo</a>
@@ -166,7 +222,7 @@ session_start();
                             </div>
                        </div>
                     </form>
-                    -->        
+                           
                     
                     <form method="POST" action="update.php">
                         <div class="col l1">
@@ -179,7 +235,7 @@ session_start();
                                 <?php 
                                 ob_get_contents();
                                 include ("conexao1.php");
-                                $consulta = "SELECT * FROM sobreInicial WHERE id = '1'";
+                                $consulta = "SELECT * FROM sobreinicial WHERE id = '1'";
                                 $con = $mysqli->query($consulta) or die($mysqli->error);
                                 ?>
 
@@ -253,7 +309,7 @@ session_start();
                                         <h2 id="h2"><?php echo $dados["tituloSessao"] ?></h2>
                                     <?php } ?>
 
-                                        <!--
+                                        
                                         <form method="POST" action="insereSessao.php">
                                             <div class="col l4">
                                                 <a href="#newTitle" class="btn red modal-trigger">Novo</a>
@@ -284,7 +340,7 @@ session_start();
                                                 //}
                                             ?>
                                         </form>
-                                        -->
+                                        
 
                                         <form method="POST" action="updateSessao.php">    
                                             <div class="col m4">
@@ -572,6 +628,10 @@ session_start();
 
 
         <style>
+            .th .i #deletar{
+                height: 20px;
+                width: 20px;
+            }
             .button{
             float:  right;
             border: 0;
@@ -626,8 +686,6 @@ session_start();
             $('.carousel').carousel('prev');
             });
         });
-            
-
         </script>
     </body>
 </html>
