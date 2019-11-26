@@ -12,13 +12,19 @@
     <link href="../static/css/bootstrap-table.min.css" rel="stylesheet">
     <link href="../static/css/bootstrap-table-materialize.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.5/venobox.css" />
+    <link rel="stylesheet" href="../static/venobox/venobox.css" type="text/css" media="screen" />
   </head>
 
   <body class="body">
-  <div class="navbar-fixed">
+    <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper">
           <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="140" height="60"/></a>
+          <a href="#" data-target="mobile-navbar" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
           <ul id="navbar-items" class="left hide-on-med-and-down">
             <li><a id='index' href="index.php">Início</a></li>
             <li>
@@ -26,185 +32,162 @@
                 Projetos <i class="material-icons right">arrow_drop_down</i>
               </a>
             </li>
-          
+            
             <li><a href="contato.php">Contato</a></li>
             <li><a href="curso.php">Curso</a></li>
           </ul>
 
           <ul id="dropdown-menu" class="dropdown-content">
-            <li><a href="portifolio.php">Todos</a></li>
             <li><a href="residencial.php">Residencial</a></li>
             <li><a href="comercial.php">Corporativo</a></li>
-          </ul>
-
-          <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-            <i class="material-icons">menu</i>
-          </a>
-        </div>
-
-        <!-- Menu Mobile -->
-        <ul id="nav-mobile" class="sidenav">
-              <li><a href="index.php">Início</a></li>
-              <li><a href="portifolio.php">Projetos</a></li>
-             
-              <li><a href="contato.php">Contato</a></li>
+            <li><a href="urbano.php">Urbano</a></li>
           </ul>
         </div>
       </nav>
     </div>
+
+    <!-- Menu Mobile -->
+    
+      <ul id="mobile-navbar" class="sidenav">
+        <li><a href="index.php">Início</a></li>
+        <li class="divider"></li>
+        <li>
+          <a class="dropdown-trigger" data-target="dropdown-menu2" id= 'portifolio' href="#">
+              Projetos <i class="material-icons right">arrow_drop_down</i>
+          </a>
+        </li>
+        <li class="divider"></li>
+        <li><a href="contato.php">Contato</a></li>
+      </ul>
+
+      <ul id="dropdown-menu2" class="dropdown-content">
+        <li><a href="residencial.php">Residencial</a></li>
+        <li><a href="comercial.php">Corporativo</a></li>
+        <li><a href="urbano.php">Urbano</a></li>
+      </ul>
+    
+    <div class="container-fluid">
+        <div class="row">
+          <br>  
+          <hr>
+          <h2 id="h2-destaques">Corporativo</h2>
+          <hr>
+          <br>
+
+          <div class="col s12">
+
+            <div class="col s12 m6 l4">
+                  <figure class="meus-projetos">
+                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox wave">
+                      <span class="mascara name">
+                        <i class="material-icons">add</i>
+                        <em> Projeto Corporativo 1 </em>
+                      </span>
+                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
+                    </a>
+                  </figure>
+            </div>
+            <div class="col s12 m6 l4">
+                  <figure class="meus-projetos">
+                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox">
+                      <span class="mascara name">
+                        <i class="material-icons">add</i>
+                        <em> Projeto Corporativo 2 </em>
+                      </span>
+                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
+                    </a>
+                  </figure>	
+            </div>
+            <div class="col s12 m6 l4">
+                  <figure class="meus-projetos">
+                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox">
+                      <span class="mascara name">
+                        <i class="material-icons">add</i>
+                        <em> Projeto Corporativo 3 </em>
+                      </span>
+                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
+                    </a>
+                  </figure>	
+            </div>
+            <div class="col s12 m6 l4">
+                  <figure class="meus-projetos">
+                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox">
+                      <span class="mascara name">
+                        <i class="material-icons">add</i>
+                        <em> Projeto Corporativo 1 </em>
+                      </span>
+                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
+                    </a>
+                  </figure>
+            </div>
+            <div class="col s12 m6 l4">
+                  <figure class="meus-projetos">
+                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox">
+                      <span class="mascara name">
+                        <i class="material-icons">add</i>
+                        <em> Projeto Corporativo 2 </em>
+                      </span>
+                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
+                    </a>
+                  </figure>	
+            </div>
+            <div class="col s12 m6 l4">
+                  <figure class="meus-projetos">
+                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox ">
+                      <span class="mascara name">
+                        <i class="material-icons">add</i>
+                        <em> Projeto Corporativo 3 </em>
+                      </span>
+                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
+                    </a>
+                  </figure>	
+						</div>
+          </div>
+      </div>
+  </div>
+
+
       <br>
 
-  
-<div class="container">
-<div>
-<br>
-<hr>
-          <h2 id="h2-destaques">Corporativo</h2><hr>
+      <a id="subirTopo">
+          <i class="material-icons topo">keyboard_arrow_up</i>
+        </a>
 
-  </nav>
-        <div class="row">
-        <h2 id="h3-destaques">Comercial 1</h2>
-           <div class="col s23"> <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                  <p><a href="#">This is a link</a></p>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Card Title</span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-              </div> </div>
-              <h2 id="h3-destaques">Comercial 2</h2>
-            <div class="col s12"> <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator" src="projetos/varandagourmet/Of 01.jpg">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                  <p><a href="#">This is a link</a></p>
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Card Title</span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-              </div> </div>
-              <h2 id="h3-destaques">Comercial 3</h2>
-            <div class="col s12">
-                    <div class="card">
-                            <div class="card-image waves-effect waves-block waves-light">
-                              <img class="activator" src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg">
-                            </div>
-                            <div class="card-content">
-                              <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                              <p><a href="#">This is a link</a></p>
-                            </div>
-                            <div class="card-reveal">
-                              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Card Title</span>
-                              <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                            </div>
-                     </div>
-                     
+      <div class="col s12">
+        <a id="subirTopo">
+          <i class="material-icons topo">keyboard_arrow_up</i>
+        </a>
+      </div>
 
-            </div>
-            <!--------------------------------------------------------------------------------------------------->
-            <h2 id="h3-destaques">Comercial 4</h2>
-            <div class="col s12"> <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg">
-                    </div>
-                    <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                      <p><a href="#">This is a link</a></p>
-                    </div>
-                    <div class="card-reveal">
-                      <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Card Title</span>
-                      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    </div>
-                  </div> </div>
-               
-                            
-                    
-        </div>
-        </div>
-        </div>
-        <footer class="page-footer purple lighten-4">
+      <br>
+
+      <footer class="page-footer"> <style>.page-footer { background: #BFAFBA  }</style>
         <div class="container">
           <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Informações Adicionais</h5>
+            <div class="col s12 m8 l8">
+              <h5 class="black-text">Informações Adicionais</h5>
               <ul>
-                <li>
-                  <div class="col l1">
-                  <img src="images/067-phone.png"/>
-                  </div>
-                  <div class="col l6">
-                    <a class="grey-text text-lighten-3">(034) 90000-0000 / (034) 3888-8888</a>
-                  </div>
-                </li>
-              </ul>
-              <br>
-              <ul> 
-                <li>
-                  <div class="col l1">
-                  <img src="images/073-location2.png"/>
-                  </div>
-                  <div class="col l6">
-                    <a class="grey-text text-lighten-3" href="https://www.google.com/maps/dir/-18.5858232,-46.5066368/unipam+maps/@-18.5803057,-46.5151017,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94ae8b2b6cbccdd1:0x13323dbb548c2682!2m2!1d-46.5137325!2d-18.5746726" target="blank_">
-                    Rua Major Gote</a>
-                  </div>
-                </li>
-              </ul>
-              <br>
-              <ul> 
-                <li>
-                  <div class="col l1">
-                  <img src="images/402-facebook2.png"/>
-                  </div>
-                  <div class="col l6">
-                    <a class="grey-text text-lighten-3" href="https://www.facebook.com/Renatavazarquiteta" target="blank_">
-                    /Renatavazarquiteta</a>
-                  </div>
-                </li>
-              </ul>
-              <br>
-              <ul> 
-                <li>
-                  <div class="col l1">
-                  <img src="images/403-instagram.png"/>
-                  </div>
-                  <div class="col l6">
-                    <a class="grey-text text-lighten-3" href="https://www.instagram.com/renata.arquiteta/" target="blank_">
-                    @renata.arquiteta/</a>
-                  </div>
-                </li>
-              </ul>
-              <br>
-              <ul> 
-                <li>
-                  <div class="col l1">
-                  <img src="images/389-mail2.png"/>
-                  </div>
-                  <div class="col l6">
-                    <a class="grey-text text-lighten-3">
-                    renata.arquiteta@live.com</a>
-                  </div>
-                </li>
+                    <li> <img src="images/067-phone.png"/> <a class="grey-text text-lighten-3">(034) 98410-6642</a> </li>
+                    <li> <img src="images/073-location2.png"/> <a class="grey-text text-lighten-3" href="https://www.google.com/maps/dir/R.+Ver.+Chico+Filgueira,+21+-+Cai%C3%A7aras,+Patos+de+Minas+-+MG,+38702-178//@-18.5741074,-46.5164245,17z/data=!4m8!4m7!1m5!1m1!1s0x94ae8b2c8e6bed7f:0xb4d59166dfd9b808!2m2!1d-46.5141185!2d-18.5730251!1m0" target="blank_">
+                    R. Ver. Chico Filgueira, 21 - Caiçaras, Patos de Minas - MG<br></a></li>
+                    <li> <img src="images/403-instagram.png"/> <a class="grey-text text-lighten-3" href="https://www.instagram.com/renata.arquiteta/" target="blank_">
+                    @renata.arquiteta/</a> </li>
+                    <li> <img src="images/389-mail2.png"/> <a class="grey-text text-lighten-3">
+                    atendimento@renatavaz.com</a> </li>
               </ul>
             </div>
-                <div class="col l4 offset-l2 s12">
-                  <h5 class="white-text">Mapa do site</h5>
+            <div class="col s12 m4 l4">
+              <h5 class="white-text">Mapa do site</h5>
                   <ul>
                     <li style="list-style-type:circle; color: black;"><a href="index.php" class="grey-text text-lighten-3">Início</a></li>
                     <li style="list-style-type:circle; color: black;"><a href="portifolio.php" class="grey-text text-lighten-3">Projetos</a></li>
                     <li style="list-style-type:circle; color: black;"><a href="#" class="grey-text text-lighten-3">Sobre</a></li>
-                    <li style="list-style-type:circle; color: black;"><a href="contato.php"class="grey-text text-lighten-3">Contato</a></li>
-                  </ul>
-                </div>
-              </div>
+                    <li style="list-style-type:circle; color: black;"><a href="contato.php" class="grey-text text-lighten-3">Contato</a></li>
+                  </ul>  
             </div>
+          </div>
+        </div>
+                  
         <div class="footer-copyright">
           <div class="container">
             <div class="row">
@@ -215,10 +198,13 @@
           </div>
         </div>
       </footer>
-    </div>
+
 
       <!--jquery-->
       <script src="../static/js/jquery-3.4.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.5/venobox.min.js"></script>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+      <script type="text/javascript" src="../static/venobox/venobox.min.js"></script>
 
       <script type="text/javascript">
         jQuery(document).ready(function(){
@@ -243,33 +229,44 @@
       </script>
 
       <script>
-      $(document).ready(function(){
-        $(document).ready(function(){
-          $('.carousel').carousel({
-            dist: 0,
-            padding: 5,
-            indicators: true,
-            fullWidth: true
-          });
+        $(document).ready(function($) {
+          $('.venobox').venobox({ titleattr: 'data-title',  }); 
         });
+      </script>
 
-
-        
-        $('.next').click(function(){
-          $('.carousel').carousel('next');
-        });
-
-        $('.preview').click(function(){
-          $('.carousel').carousel('prev');
-        });
+      <script>
+        $('.venobox_custom').venobox({
+        spinner: 'wave'
       });
-        
+      </script>
 
+      <script>
+        $(document).ready(function(){
+        $('.venobox').venobox(); 
+        });
+
+        var test = $('.venobox').venobox();
+
+        // close current item clicking on .closeme
+        $(document).on('click', '.closeme', function(e){
+            test.VBclose();
+        });
+
+        // go to next item in gallery clicking on .next
+        $(document).on('click', '.next', function(e){
+            test.VBnext();
+        });
+
+        // go to previous item in gallery clicking on .previous
+        $(document).on('click', '.previous', function(e){
+            test.VBprev();
+        });
       </script>
 
       <script src="../static/js/materialize.js"></script>
       <script src="../static/js/bootstrap-table.min.js"></script>
       <script src="../static/js/bootstrap-table-materialize.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       
       <script src="../static/js/bootstrap-table-pt-BR.min.js"></script>
       <script src="../static/js/init.js"></script>

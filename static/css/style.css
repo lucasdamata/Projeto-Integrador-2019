@@ -123,6 +123,8 @@
   overflow-x: hidden;
   font-family: 'Georgia', serif;
   font-size: medium;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -258,6 +260,7 @@ main {
   img .img-carrossel{
     max-width: 100%;
 }
+
 
 
 

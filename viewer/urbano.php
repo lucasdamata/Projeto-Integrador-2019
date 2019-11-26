@@ -1,8 +1,3 @@
-<?php
-session_start();
-ob_get_contents();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +6,6 @@ ob_get_contents();
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Renata Vaz Arquitetura</title>
       <!-- CSS  -->
-      
     <link href="../static/css/fonts.css" rel="stylesheet">
     <link href="../static/css/materialize.css" type="text/css" rel="stylesheet"/>
     <link href="../static/css/style.css" rel="stylesheet">
@@ -72,74 +66,22 @@ ob_get_contents();
         <li><a href="urbano.php">Urbano</a></li>
       </ul>
     
-    
-    <?php
-                        include ("conexao1.php");
-                        $controle_ativo = 2;
-                        $result_carousel = "SELECT * FROM arquivo ORDER BY id ASC";
-                        $resultado_carousel = mysqli_query($conn, $result_carousel);
-                        while($row_carousel = mysqli_fetch_assoc($resultado_carousel)){
-                            if($controle_ativo == 2){ ?>
-                                <div class="carousel carousel-slider">
-                                    <a class="carousel-item"><img class="img-responsive" src="foto/<?php echo $row_carousel['nome_imagem'] ?>"></a>
-                                    <a class="carousel-item"><img class="img-responsive" src="foto/<?php echo $row_carousel['nome_imagem'] ?>"></a>
-                                    <a class="carousel-item"><img class="img-responsive" src="foto/<?php echo $row_carousel['nome_imagem'] ?>"></a>
-                                    <div class="carousel-fixed-item center">
-                                        <a class="btn waves-effect white grey-text darken-text-2 preview"><</a>
-                                        <a class="btn waves-effect white grey-text darken-text-2 next">></a>
-                                    </div>
-                                </div>
-
-                                <?php
-                                    $controle_ativo = 1;
-                                ?>
-
-                                <?php
-                            }
-                        }
-                    ?>
-
-                    <br>
-
-    <div class="container">
-      <div class="col s12 m8 offset-m2 l6 offset-l3">
-      <?php 
-        ob_get_contents();
-        include ("conexao1.php");
-        $consulta = "SELECT * FROM sobreInicial LIMIT 1";
-        $con = $mysqli->query($consulta) or die($mysqli->error);
-      ?>                        
-        <?php while($dados = $con->fetch_array()) { ?>
-          <div class="card-panel grey lighten-5 z-depth-1">
-              <div class="row valign-wrapper">
-                <div class="col s2">
-                  <img src="images/woman.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                </div>
-                <div class="col s10">
-                  <span class="black-text"><h2 id="h2"><?php echo $dados["sobreTitulo"];?></h2>
-                  <?php echo $dados["sobreDescricao"];?> 
-                  </span>
-                </div>
-              </div>
-          </div>
-        <?php } ?>
-      </div>
-    </div>
-    
     <div class="container-fluid">
         <div class="row">
           <br>  
           <hr>
-          <h2 id="h2-destaques">Projetos</h2>
+          <h2 id="h2-destaques">Urbano</h2>
+          <hr>
+          <br>
 
           <div class="col s12">
 
-              <div class="col s12 m12 l4">
+            <div class="col s12 m6 l4">
                   <figure class="meus-projetos">
-                    <a href="residencial.php">
+                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox wave">
                       <span class="mascara name">
-                        <i class="material-icons">home</i>
-                        <em> Residencial </em>
+                        <i class="material-icons">add</i>
+                        <em> Projeto Urbano 1 </em>
                       </span>
                       <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
                     </a>
@@ -147,10 +89,10 @@ ob_get_contents();
             </div>
             <div class="col s12 m6 l4">
                   <figure class="meus-projetos">
-                    <a href="comercial.php">
+                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox">
                       <span class="mascara name">
-                        <i class="material-icons">location_city</i>
-                        <em> Corporativo </em>
+                        <i class="material-icons">add</i>
+                        <em> Projeto Urbano 2 </em>
                       </span>
                       <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
                     </a>
@@ -158,10 +100,43 @@ ob_get_contents();
             </div>
             <div class="col s12 m6 l4">
                   <figure class="meus-projetos">
-                    <a href="foto/16.png"  class="venobox" data-title=" ">
+                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox">
                       <span class="mascara name">
-                        <i class="material-icons">account_balance</i>
-                        <em> Urbano </em>
+                        <i class="material-icons">add</i>
+                        <em> Projeto Urbano 3 </em>
+                      </span>
+                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
+                    </a>
+                  </figure>	
+            </div>
+            <div class="col s12 m6 l4">
+                  <figure class="meus-projetos">
+                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox">
+                      <span class="mascara name">
+                        <i class="material-icons">add</i>
+                        <em> Projeto Urbano 1 </em>
+                      </span>
+                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
+                    </a>
+                  </figure>
+            </div>
+            <div class="col s12 m6 l4">
+                  <figure class="meus-projetos">
+                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox">
+                      <span class="mascara name">
+                        <i class="material-icons">add</i>
+                        <em> Projeto Urbano 2 </em>
+                      </span>
+                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
+                    </a>
+                  </figure>	
+            </div>
+            <div class="col s12 m6 l4">
+                  <figure class="meus-projetos">
+                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox ">
+                      <span class="mascara name">
+                        <i class="material-icons">add</i>
+                        <em> Projeto Urbano 3 </em>
                       </span>
                       <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
                     </a>
@@ -170,86 +145,13 @@ ob_get_contents();
           </div>
       </div>
   </div>
-      <hr>
-      <br>
 
-      <section>
-        <div class="container">
-          <div class="row">
-            <div class="col s12">
-              <?php 
-                ob_get_contents();
-                include ("conexao1.php");
-                $consulta = "SELECT * FROM sessao WHERE id = '1'";
-                $con = $mysqli->query($consulta) or die($mysqli->error);
-              ?>
-                            
-              <?php while($dados = $con->fetch_array()) { ?>
-                  <h2 id="h2Section"><?php echo $dados["tituloSessao"] ?></h2>
-              <?php } ?>
-            </div>
-            <div class="col s12 m4">
-              <?php 
-              ob_get_contents();
-              include ("conexao1.php");
-              $consulta = "SELECT * FROM cardInicial WHERE id = '1'";
-              $con = $mysqli->query($consulta) or die($mysqli->error);
-              ?>
-
-              <?php while($dados = $con->fetch_array()) { ?>
-                <div class="card white-1">
-                    <div class="card-content black-text">
-                      <span class="card-title"><?php echo $dados["cardTitulo"] ?></span>
-                      <p><?php echo $dados["cardDescricao"] ?></p>
-                    </div>
-                  </div>
-                <?php } ?>
-            </div>
-            <div class="col s12 m4">
-              <?php 
-                ob_get_contents();
-                include ("conexao1.php");
-                $consulta = "SELECT * FROM cardInicial WHERE id = '2'";
-                $con = $mysqli->query($consulta) or die($mysqli->error);
-              ?>
-
-                <?php while($dados = $con->fetch_array()) { ?>
-                  <div class="card white-1">
-                    <div class="card-content black-text">
-                      <span class="card-title"><?php echo $dados["cardTitulo"] ?></span>
-                      <p><?php echo $dados["cardDescricao"] ?></p>
-                    </div>
-                  </div>
-                <?php } ?>
-            </div>
-            <div class="col s12 m4">
-              <?php 
-                ob_get_contents();
-                include ("conexao1.php");
-                $consulta = "SELECT * FROM cardInicial WHERE id = '3'";
-                $con = $mysqli->query($consulta) or die($mysqli->error);
-              ?>
-
-                <?php while($dados = $con->fetch_array()) { ?>
-                  <div class="card white-1">
-                    <div class="card-content black-text">
-                      <span class="card-title"><?php echo $dados["cardTitulo"] ?></span>
-                      <p><?php echo $dados["cardDescricao"] ?></p>
-                    </div>
-                  </div>
-                <?php } ?>
-            </div>
-            <br>
-            <div align="center">
-              <a class="waves-effect btn" align="middle" href="contato.php">Entrar em contato</a>
-              <style>.waves-effect { background: #A684A5 }</style>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <br>
-      <hr>
+
+      <a id="subirTopo">
+          <i class="material-icons topo">keyboard_arrow_up</i>
+        </a>
 
       <div class="col s12">
         <a id="subirTopo">
@@ -257,7 +159,6 @@ ob_get_contents();
         </a>
       </div>
 
-      <hr>
       <br>
 
       <footer class="page-footer"> <style>.page-footer { background: #BFAFBA  }</style>
@@ -301,6 +202,9 @@ ob_get_contents();
 
       <!--jquery-->
       <script src="../static/js/jquery-3.4.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.5/venobox.min.js"></script>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+      <script type="text/javascript" src="../static/venobox/venobox.min.js"></script>
 
       <script type="text/javascript">
         jQuery(document).ready(function(){
@@ -325,40 +229,15 @@ ob_get_contents();
       </script>
 
       <script>
-      $(document).ready(function(){
-        $(document).ready(function(){
-          $('.carousel').carousel({
-            padding: 5,
-            indicators: false,
-            fullWidth: true
-          });
-          autoplay();
-          function autoplay(){
-            $('.carousel').carousel('next');
-            setTimeout(autoplay, 5000);
-          }
-        });
-        
-        $('.next').click(function(){
-          $('.carousel').carousel('next');
-        });
-
-        $('.preview').click(function(){
-          $('.carousel').carousel('prev');
-        });
-      });
-        
-
-      </script>
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.5/venobox.min.js"></script>
-      <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-      <script type="text/javascript" src="../static/venobox/venobox.min.js"></script>
-
-      <script>
         $(document).ready(function($) {
           $('.venobox').venobox({ titleattr: 'data-title',  }); 
         });
+      </script>
+
+      <script>
+        $('.venobox_custom').venobox({
+        spinner: 'wave'
+      });
       </script>
 
       <script>
