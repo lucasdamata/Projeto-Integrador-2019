@@ -21,30 +21,14 @@ session_start();
         <div class="navbar-fixed">
             <nav>
                 <div class="nav-wrapper">
-                    <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="140" height="60"/></a>
-                    <ul id="navbar-items" class="left hide-on-med-and-down">
-                        <li><a id='index' href="homeadm.php">Início</a></li>
-                        <li><a id='index' href="inicial.php">Página Inicial</a></li>
-                        <li>
-                        <a class="dropdown-trigger" data-target="dropdown-menu" id= 'portifolio' href="projetos.php">
-                            Projetos <i class="material-icons right">arrow_drop_down</i>
-                        </a>
-                        </li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-
-                    <ul id="dropdown-menu" class="dropdown-content">
-                        <li><a href="projetos.php">Todos</a></li>
-                        <li><a href="residencial.php">Residencial</a></li>
-                        <li><a href="comercial.php">Corporativo</a></li>
-                    </ul>
-
-                    <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-                        <i class="material-icons">menu</i>
-                    </a>
-                </div>
-
+                <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="140" height="60"/></a>
+                <a href="#" data-target="mobile-navbar" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="navbar-items" class="left hide-on-med-and-down">
+                    <li><a id='index' href="homeadm.php">Início</a></li>
+                    <li><a href="index.php" target="_blank"> Preview </a> </li>
+                </ul>
                 </div>
             </nav>
         </div>
@@ -60,35 +44,23 @@ session_start();
                 
                 <div class="col m12">
                     <hr>
-                    <h5>Carrousel</h5>
-                    <?php
-                        include ("conexao1.php");
-                        $controle_ativo = 2;
-                        $result_carousel = "SELECT * FROM arquivo ORDER BY id ASC";
-                        $resultado_carousel = mysqli_query($conn, $result_carousel);
-                        while($row_carousel = mysqli_fetch_assoc($resultado_carousel)){
-                            if($controle_ativo == 2){ ?>
-                                <div class="carousel carousel-slider">
-                                    <a class="carousel-item"><img id="img-carrossel" class="img-responsive" src="foto/<?php echo $row_carousel['nome_imagem'] ?>"></a>
-                                    <a class="carousel-item"><img id="img-carrossel" class="img-responsive" src="foto/<?php echo $row_carousel['nome_imagem'] ?>"></a>
-                                    <a class="carousel-item"><img id="img-carrossel" class="img-responsive" src="foto/<?php echo $row_carousel['nome_imagem'] ?>"></a>
-                                </div>
 
-                                <?php
-                                    $controle_ativo = 1;
-                                ?>
-
-                                <?php
-                            }
-                        }
-                    ?>
+                    <div class="carousel carousel-slider center">
+                        <a class="carousel-item"><img class="responsive-img" src="images/19.png"></a>
+                        <a class="carousel-item"><img class="responsive-img" src="images/Of 02.jpg"></a>
+                        <a class="carousel-item"><img class="responsive-img" src="images/16.png"></a>
+                        <div class="carousel-fixed-item center">
+                            <a class="btn waves-effect white grey-text darken-text-2 preview"><</a>
+                            <a class="btn waves-effect white grey-text darken-text-2 next">></a>
+                        </div>
+                    </div>
 
                     <br>
 
                     <!-- Inserção de imagens do carrousel. -->
                     <form method="POST" action="upload.php" enctype="multipart/form-data">
                         <div class="col m2">
-                            <a href="#novoImagem" class="btn red modal-trigger">Nova Imagem</a>
+                            <a href="#novoImagem" class="btn red modal-trigger">Inserir Imagem</a>
                         </div>
                         <div class="modal modal-fixed-footer" id="novoImagem">
                             <div class="modal-content">
@@ -97,7 +69,7 @@ session_start();
                                     <div class="file-field input-field">
                                         <div class="btn">
                                             <span>Escolher arquivo</span>
-                                            <input type="file" name="arquivo">
+                                            <input type="file" name="arquivos[]">
                                         </div>
                                         <div class="file-path-wrapper">
                                             <input class="file-path validate" type="text">
@@ -169,7 +141,20 @@ session_start();
                         unset($_SESSION['alertSobre']);
                         }
                     ?>
+
+                    <p>
+                        <?php
+                        if(isset($_SESSION['sucesso'])):
+                            echo $_SESSION['sucesso'];
+                            session_unset();
+                        elseif(isset($_SESSION['erro'])):
+                            echo $_SESSION['erro'];
+                            session_unset();
+                        endif;
+                        ?>
+                    </p>
                     
+                    <br>
                     <hr>
                         <h5>Campo Sobre</h5>
                         <br>
@@ -309,7 +294,7 @@ session_start();
                                         <h2 id="h2"><?php echo $dados["tituloSessao"] ?></h2>
                                     <?php } ?>
 
-                                        
+                                        <!-- 
                                         <form method="POST" action="insereSessao.php">
                                             <div class="col l4">
                                                 <a href="#newTitle" class="btn red modal-trigger">Novo</a>
@@ -339,11 +324,11 @@ session_start();
                                                 //unset($_SESSION['alertSessao']);
                                                 //}
                                             ?>
-                                        </form>
+                                        </form> -->
                                         
 
                                         <form method="POST" action="updateSessao.php">    
-                                            <div class="col m4">
+                                            <div class="col m2">
                                                 <?php
                                                 if(isset($_SESSION['alertEditTitulo'])){
                                                 echo $_SESSION['alertEditTitulo'];
@@ -615,17 +600,36 @@ session_start();
                             </div>
                         </section>
                     </form>   
-                    <br>
-                    <hr>
-                    <br>
                 </div> 
-
-                
-
-
             </div>
         </div>
 
+        <br>
+
+        <footer class="page-footer"> <style>.page-footer { background: #BFAFBA  }</style> 
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m4 l4">
+              <h5 class="white-text">Ir para outra página gerencial:</h5>
+                  <ul>
+                    <li style="list-style-type:circle; color: black;"><a href="homeadm.php" class="grey-text text-lighten-3">Início</a></li>
+                    <li style="list-style-type:circle; color: black;"><a href="inicial.php" class="grey-text text-lighten-3">Projetos</a></li>
+                    <li style="list-style-type:circle; color: black;"><a href="projetos.php" class="grey-text text-lighten-3">Sobre</a></li>
+                    <li style="list-style-type:circle; color: black;"><a href="cursoadm.php" class="grey-text text-lighten-3">Contato</a></li>
+                  </ul>  
+            </div>
+          </div>
+        </div> 
+        <div class="footer-copyright">
+          <div class="container">
+            <div class="row">
+              <div align="center">
+                <p align="middle">© 2019 Copyrights</p>
+              </div>
+            </div>     
+          </div>
+        </div>
+      </footer>
 
         <style>
             .th .i #deletar{

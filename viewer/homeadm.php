@@ -17,43 +17,60 @@
         <div class="navbar-fixed">
             <nav>
                 <div class="nav-wrapper">
-                    <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="140" height="60"/></a>
-                    <ul id="navbar-items" class="left hide-on-med-and-down">
-                        <li><a id='index' href="homeadm.php">Início</a></li>
-                        <li><a id='index' href="inicial.php">Página Inicial</a></li>
-                        <li>
-                        <a class="dropdown-trigger" data-target="dropdown-menu" id= 'portifolio' href="projetos.php">
-                            Projetos <i class="material-icons right">arrow_drop_down</i>
-                        </a>
-                        </li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-
-                    <ul id="dropdown-menu" class="dropdown-content">
-                        <li><a href="projetos.php">Todos</a></li>
-                        <li><a href="residencial.php">Residencial</a></li>
-                        <li><a href="comercial.php">Corporativo</a></li>
-                    </ul>
-
-                    <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-                        <i class="material-icons">menu</i>
-                    </a>
-                </div>
-
+                <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="140" height="60"/></a>
+                <a href="#" data-target="mobile-navbar" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="navbar-items" class="left hide-on-med-and-down">
+                    <li><a id='index' href="homeadm.php">Início</a></li>
+                    <li><a href="index.php" target="_blank"> Preview </a> </li>
+                </ul>
                 </div>
             </nav>
         </div>
 
         <div class="container">
             <div class="row">
-                <div class="col s12">
+                <div class="col m12">
                     <h2>Seja bem-vindo!</h2>
                     <p>Aqui você irá gerenciar as informações disponíveis em seu site, de maneira pratica e fácil. Basta selecionar a página 
                         na qual, você deseja incluir, excluir ou editar certo componente.</p>
+                    <p>Clique no botão referente a página que voce deseja gerenciar:</p>
+                </div>
+                <br>
+                <div class="col m3">
+                    <a class="waves-effect waves-light btn" href="inicial.php"><i class="material-icons left">edit</i>Página Inicial</a>
+                </div>
+                <div class="col m3">
+                    <a class="waves-effect waves-light btn" href="projetos.php"><i class="material-icons left">edit</i>Projetos</a>
+                </div>
+                <div class="col m3">
+                    <a class="waves-effect waves-light btn" href="cursoadm.php"><i class="material-icons left">edit</i>Curso</a>
                 </div>
             </div>
         </div>
+
+        <h4></h4>
+        <h5></h5>
+        
+        <?php
+            for($i=0; $i<22;$i++){
+                echo "<br>";
+            }
+        ?>
+
+        <footer class="page-footer"> <style>.page-footer { background: #BFAFBA; bottom: 0;  }</style>  
+        <div class="footer-copyright">
+          <div class="container">
+            <div class="row">
+              <div align="center">
+                <p align="middle">© 2019 Copyrights</p>
+              </div>
+            </div>     
+          </div>
+        </div>
+      </footer>
+
 
         <script src="../static/js/materialize.js"></script>
         <script src="../static/js/bootstrap-table.min.js"></script>

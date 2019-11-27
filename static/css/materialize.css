@@ -8409,7 +8409,7 @@ input[type=range]::-ms-thumb {
 }
 
 .carousel .carousel-item > img {
-  max-width: auto;
+  max-width: 100%;
   max-height: 640px;
 
 

@@ -6,6 +6,12 @@
  * Made By MaterializeCSS.com
  */
 
+ .vbox-container img {
+   max-width: 550px;
+  width: 950px !important;
+  height: auto;
+}
+
  .meus-projetos{
 	position: relative;
 	overflow: hidden;
@@ -97,6 +103,14 @@
 	font-size: inherit;
 }
 
+h2{
+  position: relative;
+  text-align:left; 
+  font-family: 'FreeMono', monospace;
+  font-weight: normal;
+  font-size: 3.56rem;
+  }
+
 #h2{
   position: relative;
   text-align:left; 
@@ -139,7 +153,6 @@ main {
 
 #subirTopo {
   text-decoration: none;
-  margin: 30px;
   display:block;
   color: black;
   text-align: center;
@@ -148,7 +161,6 @@ main {
   font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
-  position: relative;
   border: 0;
   font-family: sans-serif;
   opacity: .8;
@@ -257,9 +269,6 @@ main {
     background: linear-gradient(to right, #847095 ,#A684A5 , #BFAFBA); 
   }
 
-  img .img-carrossel{
-    max-width: 100%;
-}
 
 
 

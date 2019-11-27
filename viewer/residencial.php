@@ -75,89 +75,200 @@
           <br>
 
           <div class="col s12">
+            <!-- INÍCIO // Buscando projeto inserido no banco de dados -->
+            <div class="col s12 m6 l4">
+            <?php 
+                ob_get_contents();
+                include ("conexao1.php");
+                $consulta = "SELECT * FROM tb_arquivos WHERE id = '1'";
+                $con = $mysqli->query($consulta) or die($mysqli->error);
+              ?>
+              <?php while($dados = $con->fetch_array()) { ?>
+                  <figure class="meus-projetos">
+                    <a href="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>" class="venobox" data-gall="myGallery">
+                      <span class="mascara name">
+                        <i class="material-icons">add</i>
+                        <em> <?php echo $dados["nomeProjeto"] ?> </em>
+                      </span>
+                      <img src="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>" class="responsive-img img-fluid">							
+                    </a>
+                  </figure>
+                <?php } ?>
+                <!-- Conectando imagens de outras IDs do banco baseado com o nome do projeto -->
+                <?php 
+                  ob_get_contents();
+                  include ("conexao1.php");
+                  $consulta = "SELECT * FROM tb_arquivos WHERE id = '2'";
+                  $con = $mysqli->query($consulta) or die($mysqli->error);
+                ?>
+                <?php while($dados = $con->fetch_array()) { ?>
+                <a class="venobox" data-gall="myGallery" href="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>"></a>
+                <?php } ?>
+            </div>
+            <!-- FIM // Fim da busca de um projeto -->
 
+            <!-- INÍCIO // Buscando projeto inserido no banco de dados -->
             <div class="col s12 m6 l4">
+            <?php 
+                ob_get_contents();
+                include ("conexao1.php");
+                $consulta = "SELECT * FROM tb_arquivos WHERE id = '1'";
+                $con = $mysqli->query($consulta) or die($mysqli->error);
+              ?>
+              <?php while($dados = $con->fetch_array()) { ?>
                   <figure class="meus-projetos">
-                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox wave">
+                    <a href="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>" class="venobox" data-gall="myGallery">
                       <span class="mascara name">
                         <i class="material-icons">add</i>
-                        <em> Projeto Residencial 1 </em>
+                        <em> <?php echo $dados["nomeProjeto"] ?> </em>
                       </span>
-                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
+                      <img src="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>" class="responsive-img img-fluid">							
                     </a>
                   </figure>
+                <?php } ?>
+                <!-- Conectando imagens de outras IDs do banco baseado com o nome do projeto -->
+                <?php 
+                  ob_get_contents();
+                  include ("conexao1.php");
+                  $consulta = "SELECT * FROM tb_arquivos WHERE id = '2'";
+                  $con = $mysqli->query($consulta) or die($mysqli->error);
+                ?>
+                <?php while($dados = $con->fetch_array()) { ?>
+                <a class="venobox" data-gall="myGallery" href="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>"></a>
+                <?php } ?>
             </div>
+            <!-- FIM // Fim da busca de um projeto -->
+            
+            <!-- INÍCIO // Buscando projeto inserido no banco de dados -->
             <div class="col s12 m6 l4">
+            <?php 
+                ob_get_contents();
+                include ("conexao1.php");
+                $consulta = "SELECT * FROM tb_arquivos WHERE id = '1'";
+                $con = $mysqli->query($consulta) or die($mysqli->error);
+              ?>
+              <?php while($dados = $con->fetch_array()) { ?>
                   <figure class="meus-projetos">
-                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox">
+                    <a href="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>" class="venobox" data-gall="myGallery">
                       <span class="mascara name">
                         <i class="material-icons">add</i>
-                        <em> Projeto Residecial 2 </em>
+                        <em> <?php echo $dados["nomeProjeto"] ?> </em>
                       </span>
-                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
-                    </a>
-                  </figure>	
-            </div>
-            <div class="col s12 m6 l4">
-                  <figure class="meus-projetos">
-                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox">
-                      <span class="mascara name">
-                        <i class="material-icons">add</i>
-                        <em> Projeto Residencial 3 </em>
-                      </span>
-                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
-                    </a>
-                  </figure>	
-            </div>
-            <div class="col s12 m6 l4">
-                  <figure class="meus-projetos">
-                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox">
-                      <span class="mascara name">
-                        <i class="material-icons">add</i>
-                        <em> Projeto Residencial 1 </em>
-                      </span>
-                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
+                      <img src="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>" class="responsive-img img-fluid">							
                     </a>
                   </figure>
+                <?php } ?>
+                <!-- Conectando imagens de outras IDs do banco baseado com o nome do projeto -->
+                <?php 
+                  ob_get_contents();
+                  include ("conexao1.php");
+                  $consulta = "SELECT * FROM tb_arquivos WHERE id = '2'";
+                  $con = $mysqli->query($consulta) or die($mysqli->error);
+                ?>
+                <?php while($dados = $con->fetch_array()) { ?>
+                <a class="venobox" data-gall="myGallery" href="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>"></a>
+                <?php } ?>
             </div>
+            <!-- FIM // Fim da busca de um projeto -->
+            
+            <!-- INÍCIO // Buscando projeto inserido no banco de dados -->
             <div class="col s12 m6 l4">
+            <?php 
+                ob_get_contents();
+                include ("conexao1.php");
+                $consulta = "SELECT * FROM tb_arquivos WHERE id = '1'";
+                $con = $mysqli->query($consulta) or die($mysqli->error);
+              ?>
+              <?php while($dados = $con->fetch_array()) { ?>
                   <figure class="meus-projetos">
-                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox">
+                    <a href="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>" class="venobox" data-gall="myGallery">
                       <span class="mascara name">
                         <i class="material-icons">add</i>
-                        <em> Projeto Residecial 2 </em>
+                        <em> <?php echo $dados["nomeProjeto"] ?> </em>
                       </span>
-                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
+                      <img src="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>" class="responsive-img img-fluid">							
                     </a>
-                  </figure>	
+                  </figure>
+                <?php } ?>
+                <!-- Conectando imagens de outras IDs do banco baseado com o nome do projeto -->
+                <?php 
+                  ob_get_contents();
+                  include ("conexao1.php");
+                  $consulta = "SELECT * FROM tb_arquivos WHERE id = '2'";
+                  $con = $mysqli->query($consulta) or die($mysqli->error);
+                ?>
+                <?php while($dados = $con->fetch_array()) { ?>
+                <a class="venobox" data-gall="myGallery" href="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>"></a>
+                <?php } ?>
             </div>
+            <!-- FIM // Fim da busca de um projeto -->
+            
+            <!-- INÍCIO // Buscando projeto inserido no banco de dados -->
             <div class="col s12 m6 l4">
+            <?php 
+                ob_get_contents();
+                include ("conexao1.php");
+                $consulta = "SELECT * FROM tb_arquivos WHERE id = '1'";
+                $con = $mysqli->query($consulta) or die($mysqli->error);
+              ?>
+              <?php while($dados = $con->fetch_array()) { ?>
                   <figure class="meus-projetos">
-                    <a href="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="venobox ">
+                    <a href="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>" class="venobox" data-gall="myGallery">
                       <span class="mascara name">
                         <i class="material-icons">add</i>
-                        <em> Projeto Residencial 3 </em>
+                        <em> <?php echo $dados["nomeProjeto"] ?> </em>
                       </span>
-                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
+                      <img src="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>" class="responsive-img img-fluid">							
                     </a>
-                  </figure>	
-						</div>
+                  </figure>
+                <?php } ?>
+                <!-- Conectando imagens de outras IDs do banco baseado com o nome do projeto -->
+                <?php 
+                  ob_get_contents();
+                  include ("conexao1.php");
+                  $consulta = "SELECT * FROM tb_arquivos WHERE id = '2'";
+                  $con = $mysqli->query($consulta) or die($mysqli->error);
+                ?>
+                <?php while($dados = $con->fetch_array()) { ?>
+                <a class="venobox" data-gall="myGallery" href="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>"></a>
+                <?php } ?>
+            </div>
+            <!-- FIM // Fim da busca de um projeto -->
+            
+            <!-- INÍCIO // Buscando projeto inserido no banco de dados -->
+            <div class="col s12 m6 l4">
+            <?php 
+                ob_get_contents();
+                include ("conexao1.php");
+                $consulta = "SELECT * FROM tb_arquivos WHERE id = '1'";
+                $con = $mysqli->query($consulta) or die($mysqli->error);
+              ?>
+              <?php while($dados = $con->fetch_array()) { ?>
+                  <figure class="meus-projetos">
+                    <a href="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>" class="venobox" data-gall="myGallery">
+                      <span class="mascara name">
+                        <i class="material-icons">add</i>
+                        <em> <?php echo $dados["nomeProjeto"] ?> </em>
+                      </span>
+                      <img src="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>" class="responsive-img img-fluid">							
+                    </a>
+                  </figure>
+                <?php } ?>
+                <!-- Conectando imagens de outras IDs do banco baseado com o nome do projeto -->
+                <?php 
+                  ob_get_contents();
+                  include ("conexao1.php");
+                  $consulta = "SELECT * FROM tb_arquivos WHERE id = '2'";
+                  $con = $mysqli->query($consulta) or die($mysqli->error);
+                ?>
+                <?php while($dados = $con->fetch_array()) { ?>
+                <a class="venobox" data-gall="myGallery" href="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>"></a>
+                <?php } ?>
+            </div>
+            <!-- FIM // Fim da busca de um projeto -->
           </div>
       </div>
-  </div>
-
-
-      <br>
-
-      <a id="subirTopo">
-          <i class="material-icons topo">keyboard_arrow_up</i>
-        </a>
-
-      <div class="col s12">
-        <a id="subirTopo">
-          <i class="material-icons topo">keyboard_arrow_up</i>
-        </a>
-      </div>
+    </div>
 
       <br>
 

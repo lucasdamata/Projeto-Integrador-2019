@@ -20,10 +20,13 @@
 </head>
 
 <body class="body">
-<div class="navbar-fixed">
+    <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper">
           <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="140" height="60"/></a>
+          <a href="#" data-target="mobile-navbar" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
           <ul id="navbar-items" class="left hide-on-med-and-down">
             <li><a id='index' href="index.php">Início</a></li>
             <li>
@@ -31,28 +34,15 @@
                 Projetos <i class="material-icons right">arrow_drop_down</i>
               </a>
             </li>
-           
+            
             <li><a href="contato.php">Contato</a></li>
             <li><a href="curso.php">Curso</a></li>
           </ul>
 
           <ul id="dropdown-menu" class="dropdown-content">
-            <li><a href="portifolio.php">Todos</a></li>
             <li><a href="residencial.php">Residencial</a></li>
             <li><a href="comercial.php">Corporativo</a></li>
-          </ul>
-
-          <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-            <i class="material-icons">menu</i>
-          </a>
-        </div>
-
-        <!-- Menu Mobile -->
-        <ul id="nav-mobile" class="sidenav">
-              <li><a href="index.php">Início</a></li>
-              <li><a href="portifolio.php">Projetos</a></li>
-              
-              <li><a href="contato.php">Contato</a></li>
+            <li><a href="urbano.php">Urbano</a></li>
           </ul>
         </div>
       </nav>
@@ -75,7 +65,11 @@
                 </form>
 
             </div>
-           <br> <br> <br>
+            <?php
+                for($i=0; $i<7;$i++){
+                    echo "<br>";
+                }
+            ?>
             <footer class="page-footer"> <style>.page-footer { background: linear-gradient(to right, #847095 ,#A684A5 , #BFAFBA)  }</style>
         <div class="container">
           <div class="row">

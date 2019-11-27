@@ -71,35 +71,18 @@ ob_get_contents();
         <li><a href="comercial.php">Corporativo</a></li>
         <li><a href="urbano.php">Urbano</a></li>
       </ul>
-    
-    
-    <?php
-                        include ("conexao1.php");
-                        $controle_ativo = 2;
-                        $result_carousel = "SELECT * FROM arquivo ORDER BY id ASC";
-                        $resultado_carousel = mysqli_query($conn, $result_carousel);
-                        while($row_carousel = mysqli_fetch_assoc($resultado_carousel)){
-                            if($controle_ativo == 2){ ?>
-                                <div class="carousel carousel-slider">
-                                    <a class="carousel-item"><img class="img-responsive" src="foto/<?php echo $row_carousel['nome_imagem'] ?>"></a>
-                                    <a class="carousel-item"><img class="img-responsive" src="foto/<?php echo $row_carousel['nome_imagem'] ?>"></a>
-                                    <a class="carousel-item"><img class="img-responsive" src="foto/<?php echo $row_carousel['nome_imagem'] ?>"></a>
-                                    <div class="carousel-fixed-item center">
-                                        <a class="btn waves-effect white grey-text darken-text-2 preview"><</a>
-                                        <a class="btn waves-effect white grey-text darken-text-2 next">></a>
-                                    </div>
-                                </div>
 
-                                <?php
-                                    $controle_ativo = 1;
-                                ?>
+      <div class="carousel carousel-slider center">
+            <a class="carousel-item"><img class="responsive-img" src="images/19.png"></a>
+            <a class="carousel-item"><img class="responsive-img" src="images/Of 02.jpg"></a>
+            <a class="carousel-item"><img class="responsive-img" src="images/16.png"></a>
+          <div class="carousel-fixed-item center">
+            <a class="btn waves-effect white grey-text darken-text-2 preview"><</a>
+            <a class="btn waves-effect white grey-text darken-text-2 next">></a>
+          </div>
+        </div>
 
-                                <?php
-                            }
-                        }
-                    ?>
-
-                    <br>
+    <br>
 
     <div class="container">
       <div class="col s12 m8 offset-m2 l6 offset-l3">
@@ -116,7 +99,7 @@ ob_get_contents();
                   <img src="images/woman.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
                 </div>
                 <div class="col s10">
-                  <span class="black-text"><h2 id="h2"><?php echo $dados["sobreTitulo"];?></h2>
+                  <span class="black-text"><h2 id="h3"><?php echo $dados["sobreTitulo"];?></h3>
                   <?php echo $dados["sobreDescricao"];?> 
                   </span>
                 </div>
@@ -141,7 +124,7 @@ ob_get_contents();
                         <i class="material-icons">home</i>
                         <em> Residencial </em>
                       </span>
-                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
+                      <img src="projetos/residencia1/1.jpeg" class="responsive-img img-fluid">							
                     </a>
                   </figure>
             </div>
@@ -152,7 +135,7 @@ ob_get_contents();
                         <i class="material-icons">location_city</i>
                         <em> Corporativo </em>
                       </span>
-                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
+                      <img src="projetos/comercial/0021.jpg" class="responsive-img img-fluid">							
                     </a>
                   </figure>	
             </div>
@@ -163,7 +146,7 @@ ob_get_contents();
                         <i class="material-icons">account_balance</i>
                         <em> Urbano </em>
                       </span>
-                      <img src="projetos/residencia1/WhatsApp Image 2019-08-19 at 16.29.15.jpeg" class="responsive-img img-fluid">							
+                      <img src="projetos/projetosUrbanos/3.jpg" class="responsive-img img-fluid">							
                     </a>
                   </figure>	
 						</div>
@@ -240,7 +223,7 @@ ob_get_contents();
                 <?php } ?>
             </div>
             <br>
-            <div align="center">
+            <div align="center" class="col s12 l12 m12">
               <a class="waves-effect btn" align="middle" href="contato.php">Entrar em contato</a>
               <style>.waves-effect { background: #A684A5 }</style>
             </div>
@@ -329,7 +312,7 @@ ob_get_contents();
         $(document).ready(function(){
           $('.carousel').carousel({
             padding: 5,
-            indicators: false,
+            indicators: true,
             fullWidth: true
           });
           autoplay();
