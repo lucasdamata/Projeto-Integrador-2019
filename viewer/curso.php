@@ -140,13 +140,14 @@
     <input type="submit" class="contact-form-btn" value="Adiquira já o seu!">
 
   </main>
+  
+  <br>
 
-
-  <footer class="page-footer"> <style>.page-footer { background: linear-gradient(to right, #847095 ,#A684A5 , #BFAFBA)  }</style>
+  <footer class="page-footer"> <style>.page-footer { background: #BFAFBA  }</style>
         <div class="container">
           <div class="row">
             <div class="col s12 m8 l8">
-              <h5 class="white-text">Informações Adicionais</h5>
+              <h5 class="black-text">Informações Adicionais</h5>
               <ul>
                     <li> <img src="images/067-phone.png"/> <a class="grey-text text-lighten-3">(034) 98410-6642</a> </li>
                     <li> <img src="images/073-location2.png"/> <a class="grey-text text-lighten-3" href="https://www.google.com/maps/dir/R.+Ver.+Chico+Filgueira,+21+-+Cai%C3%A7aras,+Patos+de+Minas+-+MG,+38702-178//@-18.5741074,-46.5164245,17z/data=!4m8!4m7!1m5!1m1!1s0x94ae8b2c8e6bed7f:0xb4d59166dfd9b808!2m2!1d-46.5141185!2d-18.5730251!1m0" target="blank_">
@@ -158,7 +159,7 @@
               </ul>
             </div>
             <div class="col s12 m4 l4">
-              <h5 class="white-text">Mapa do site</h5>
+              <h5 class="black-text">Mapa do site</h5>
                   <ul>
                     <li style="list-style-type:circle; color: black;"><a href="index.php" class="grey-text text-lighten-3">Início</a></li>
                     <li style="list-style-type:circle; color: black;"><a href="portifolio.php" class="grey-text text-lighten-3">Projetos</a></li>

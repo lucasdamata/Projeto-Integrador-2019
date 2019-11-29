@@ -259,7 +259,7 @@ ob_get_contents();
               </ul>
             </div>
             <div class="col s12 m4 l4">
-              <h5 class="white-text">Mapa do site</h5>
+              <h5 class="black-text">Mapa do site</h5>
                   <ul>
                     <li style="list-style-type:circle; color: black;"><a href="index.php" class="grey-text text-lighten-3">Início</a></li>
                     <li style="list-style-type:circle; color: black;"><a href="portifolio.php" class="grey-text text-lighten-3">Projetos</a></li>

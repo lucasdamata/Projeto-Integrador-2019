@@ -112,7 +112,7 @@
             <?php 
                 ob_get_contents();
                 include ("conexao1.php");
-                $consulta = "SELECT * FROM tb_arquivos WHERE id = '1'";
+                $consulta = "SELECT * FROM tb_arquivos WHERE id = '2'";
                 $con = $mysqli->query($consulta) or die($mysqli->error);
               ?>
               <?php while($dados = $con->fetch_array()) { ?>
@@ -130,7 +130,39 @@
                 <?php 
                   ob_get_contents();
                   include ("conexao1.php");
-                  $consulta = "SELECT * FROM tb_arquivos WHERE id = '2'";
+                  $consulta = "SELECT * FROM tb_arquivos WHERE id = '3'";
+                  $con = $mysqli->query($consulta) or die($mysqli->error);
+                ?>
+                <?php while($dados = $con->fetch_array()) { ?>
+                <a class="venobox" data-gall="myGallery" href="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>"></a>
+                <?php } ?>
+            </div>
+            <!-- FIM // Fim da busca de um projeto -->
+            <br>
+            <!-- INÍCIO // Buscando projeto inserido no banco de dados -->
+            <div class="col s12 m6 l4">
+            <?php 
+                ob_get_contents();
+                include ("conexao1.php");
+                $consulta = "SELECT * FROM tb_arquivos WHERE id = '3'";
+                $con = $mysqli->query($consulta) or die($mysqli->error);
+              ?>
+              <?php while($dados = $con->fetch_array()) { ?>
+                  <figure class="meus-projetos">
+                    <a href="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>" class="venobox" data-gall="myGallery">
+                      <span class="mascara name">
+                        <i class="material-icons">add</i>
+                        <em> <?php echo $dados["nomeProjeto"] ?> </em>
+                      </span>
+                      <img src="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>" class="responsive-img img-fluid" id="tamanho">							
+                    </a>
+                  </figure>
+                <?php } ?>
+                <!-- Conectando imagens de outras IDs do banco baseado com o nome do projeto -->
+                <?php 
+                  ob_get_contents();
+                  include ("conexao1.php");
+                  $consulta = "SELECT * FROM tb_arquivos WHERE id = '4'";
                   $con = $mysqli->query($consulta) or die($mysqli->error);
                 ?>
                 <?php while($dados = $con->fetch_array()) { ?>
@@ -144,7 +176,7 @@
             <?php 
                 ob_get_contents();
                 include ("conexao1.php");
-                $consulta = "SELECT * FROM tb_arquivos WHERE id = '1'";
+                $consulta = "SELECT * FROM tb_arquivos WHERE id = '4'";
                 $con = $mysqli->query($consulta) or die($mysqli->error);
               ?>
               <?php while($dados = $con->fetch_array()) { ?>
@@ -162,7 +194,7 @@
                 <?php 
                   ob_get_contents();
                   include ("conexao1.php");
-                  $consulta = "SELECT * FROM tb_arquivos WHERE id = '2'";
+                  $consulta = "SELECT * FROM tb_arquivos WHERE id = '5'";
                   $con = $mysqli->query($consulta) or die($mysqli->error);
                 ?>
                 <?php while($dados = $con->fetch_array()) { ?>
@@ -176,7 +208,7 @@
             <?php 
                 ob_get_contents();
                 include ("conexao1.php");
-                $consulta = "SELECT * FROM tb_arquivos WHERE id = '1'";
+                $consulta = "SELECT * FROM tb_arquivos WHERE id = '5'";
                 $con = $mysqli->query($consulta) or die($mysqli->error);
               ?>
               <?php while($dados = $con->fetch_array()) { ?>
@@ -194,7 +226,7 @@
                 <?php 
                   ob_get_contents();
                   include ("conexao1.php");
-                  $consulta = "SELECT * FROM tb_arquivos WHERE id = '2'";
+                  $consulta = "SELECT * FROM tb_arquivos WHERE id = '6'";
                   $con = $mysqli->query($consulta) or die($mysqli->error);
                 ?>
                 <?php while($dados = $con->fetch_array()) { ?>
@@ -208,39 +240,7 @@
             <?php 
                 ob_get_contents();
                 include ("conexao1.php");
-                $consulta = "SELECT * FROM tb_arquivos WHERE id = '1'";
-                $con = $mysqli->query($consulta) or die($mysqli->error);
-              ?>
-              <?php while($dados = $con->fetch_array()) { ?>
-                  <figure class="meus-projetos">
-                    <a href="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>" class="venobox" data-gall="myGallery">
-                      <span class="mascara name">
-                        <i class="material-icons">add</i>
-                        <em> <?php echo $dados["nomeProjeto"] ?> </em>
-                      </span>
-                      <img src="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>" class="responsive-img img-fluid">							
-                    </a>
-                  </figure>
-                <?php } ?>
-                <!-- Conectando imagens de outras IDs do banco baseado com o nome do projeto -->
-                <?php 
-                  ob_get_contents();
-                  include ("conexao1.php");
-                  $consulta = "SELECT * FROM tb_arquivos WHERE id = '2'";
-                  $con = $mysqli->query($consulta) or die($mysqli->error);
-                ?>
-                <?php while($dados = $con->fetch_array()) { ?>
-                <a class="venobox" data-gall="myGallery" href="img_projetos/residencial/<?php echo $dados["nome_do_arquivo"]?>"></a>
-                <?php } ?>
-            </div>
-            <!-- FIM // Fim da busca de um projeto -->
-            
-            <!-- INÍCIO // Buscando projeto inserido no banco de dados -->
-            <div class="col s12 m6 l4">
-            <?php 
-                ob_get_contents();
-                include ("conexao1.php");
-                $consulta = "SELECT * FROM tb_arquivos WHERE id = '1'";
+                $consulta = "SELECT * FROM tb_arquivos WHERE id = '6'";
                 $con = $mysqli->query($consulta) or die($mysqli->error);
               ?>
               <?php while($dados = $con->fetch_array()) { ?>
@@ -288,7 +288,7 @@
               </ul>
             </div>
             <div class="col s12 m4 l4">
-              <h5 class="white-text">Mapa do site</h5>
+              <h5 class="black-text">Mapa do site</h5>
                   <ul>
                     <li style="list-style-type:circle; color: black;"><a href="index.php" class="grey-text text-lighten-3">Início</a></li>
                     <li style="list-style-type:circle; color: black;"><a href="portifolio.php" class="grey-text text-lighten-3">Projetos</a></li>

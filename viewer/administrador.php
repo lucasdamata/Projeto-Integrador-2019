@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -24,10 +27,21 @@
                 <ul id="navbar-items" class="left hide-on-med-and-down">
                     <li><a id='index' href="homeadm.php">Início</a></li>
                     <li><a href="index.php" target="_blank"> Preview </a> </li>
+                    <?php
+                        if(!empty($_SESSION['id'])){
+                            echo "<li><a href='sair.php'> Sair </a> </li>";
+                        }else{
+                            $_SESSION['msg'] = "É necessário efetuar o login.";
+                            header("Location: admin.php");
+                        }
+                    ?>
+                    
                 </ul>
                 </div>
             </nav>
         </div>
+
+        
 
         <div class="container">
             <div class="row">

@@ -113,7 +113,7 @@
             <?php 
                 ob_get_contents();
                 include ("conexao1.php");
-                $consulta = "SELECT * FROM tb_arquivos_comercial WHERE id = '1'";
+                $consulta = "SELECT * FROM tb_arquivos_comercial WHERE id = '2'";
                 $con = $mysqli->query($consulta) or die($mysqli->error);
               ?>
               <?php while($dados = $con->fetch_array()) { ?>
@@ -145,7 +145,7 @@
             <?php 
                 ob_get_contents();
                 include ("conexao1.php");
-                $consulta = "SELECT * FROM tb_arquivos_comercial WHERE id = '1'";
+                $consulta = "SELECT * FROM tb_arquivos_comercial WHERE id = '3'";
                 $con = $mysqli->query($consulta) or die($mysqli->error);
               ?>
               <?php while($dados = $con->fetch_array()) { ?>
@@ -177,7 +177,7 @@
             <?php 
                 ob_get_contents();
                 include ("conexao1.php");
-                $consulta = "SELECT * FROM tb_arquivos_comercial WHERE id = '1'";
+                $consulta = "SELECT * FROM tb_arquivos_comercial WHERE id = '4'";
                 $con = $mysqli->query($consulta) or die($mysqli->error);
               ?>
               <?php while($dados = $con->fetch_array()) { ?>
@@ -209,7 +209,7 @@
             <?php 
                 ob_get_contents();
                 include ("conexao1.php");
-                $consulta = "SELECT * FROM tb_arquivos_comercial WHERE id = '1'";
+                $consulta = "SELECT * FROM tb_arquivos_comercial WHERE id = '5'";
                 $con = $mysqli->query($consulta) or die($mysqli->error);
               ?>
               <?php while($dados = $con->fetch_array()) { ?>
@@ -241,7 +241,7 @@
             <?php 
                 ob_get_contents();
                 include ("conexao1.php");
-                $consulta = "SELECT * FROM tb_arquivos_comercial WHERE id = '1'";
+                $consulta = "SELECT * FROM tb_arquivos_comercial WHERE id = '6'";
                 $con = $mysqli->query($consulta) or die($mysqli->error);
               ?>
               <?php while($dados = $con->fetch_array()) { ?>
@@ -289,7 +289,7 @@
               </ul>
             </div>
             <div class="col s12 m4 l4">
-              <h5 class="white-text">Mapa do site</h5>
+              <h5 class="black-text">Mapa do site</h5>
                   <ul>
                     <li style="list-style-type:circle; color: black;"><a href="index.php" class="grey-text text-lighten-3">Início</a></li>
                     <li style="list-style-type:circle; color: black;"><a href="portifolio.php" class="grey-text text-lighten-3">Projetos</a></li>

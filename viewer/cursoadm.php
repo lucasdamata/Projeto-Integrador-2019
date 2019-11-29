@@ -20,44 +20,20 @@
   
   <body class="corpo">
 
-  <div class="navbar-fixed">
-        <nav>
-          <div class="nav-wrapper purple lighten-4">
-            <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="130" height="65"/></a>
-            <ul id="navbar-items" class="left hide-on-med-and-down">
-              <li><a id='index' href="index.php">Início</a></li>
-              <li>
-                <a class="dropdown-trigger" data-target="dropdown-menu" id= 'portifolio' href="#">
-                 Projetos <i class="material-icons right">arrow_drop_down</i>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                <a id="logo-container" href="index.php" class="brand-logo center"><img src="logo_v/assinaturasemFundo.png" alt="logo" width="140" height="60"/></a>
+                <a href="#" data-target="mobile-navbar" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
                 </a>
-              </li>
-              <li><a href="#">Sobre</a></li>
-              <li><a href="contato.php">Contato</a></li>
-              <li><a href="curso.php">Curso</a></li>
-            </ul>
-  
-            <ul id="dropdown-menu" class="dropdown-content">
-              <li><a href="portifolio.php">Todos</a></li>
-              <li><a href="#">Residencial</a></li>
-              <li><a href="#">Corporativo</a></li>
-            </ul>
-  
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-              <i class="material-icons">menu</i>
-            </a>
-          </div>
-  
-          <!-- Menu Mobile -->
-          <ul id="nav-mobile" class="sidenav">
-                <li><a href="index.php">Início</a></li>
-                <li><a href="portifolio.php">Projetos</a></li>
-                <li><a href="#">Sobre-nós</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-      
-          </div>
-        </div>  
+                <ul id="navbar-items" class="left hide-on-med-and-down">
+                    <li><a id='index' href="homeadm.php">Início</a></li>
+                    <li><a href="index.php" target="_blank"> Preview </a> </li>
+                </ul>
+                </div>
+            </nav>
+        </div> 
 
 
 
